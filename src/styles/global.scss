@@ -1,0 +1,26 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #ececec;
+}
+
+.Header {
+  margin-top: 20px;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-weight: bold;
+  margin-right: 30px;
+  font-size: 13px;
+  color: black;
+  &:hover {
+    color: red;
+  }
+}
+.navbar-light .navbar-nav .nav-link.active {
+  color: red;
+}
+
+.navbar-nav {
+  img {
+    margin-top: -6px;
+  }
+}
