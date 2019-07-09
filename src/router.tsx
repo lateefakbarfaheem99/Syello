@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Route, HashRouter, Switch } from 'react-router-dom';
-import { App } from './app';
-import { About, MembersPage } from './components';
+import * as React from 'react'
+import { Route, HashRouter, Switch } from 'react-router-dom'
+import { App } from './app'
+import { About, MembersPage, Contact } from './components'
 
 export const AppRouter: React.StatelessComponent<{}> = () => {
   return (
@@ -11,9 +11,9 @@ export const AppRouter: React.StatelessComponent<{}> = () => {
         <Switch>
           <Route exact path="/" component={About} />
           <Route path="/about" component={About} />
-          <Route path="/members" component={MembersPage} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </div>
     </HashRouter>
-  );
+  )
 }

@@ -4,10 +4,11 @@ import logo from '../images/logo.png'
 import get_app_btn from '../images/get_app_btn.png'
 import { Button, Navbar, Nav, NavItem } from 'react-bootstrap'
 import '../styles/global.scss'
+
 export const Header: React.StatelessComponent<{}> = () => {
   return (
-    <div className="Header row justify-content-md-center">
-      <Navbar className="col col-lg-8" expand="lg">
+    <div className="Header row justify-content-md-center border-bottom">
+      <Navbar className="col col-sm-8" expand="sm">
         <Navbar.Brand href="#home">
           {' '}
           <img
@@ -18,7 +19,7 @@ export const Header: React.StatelessComponent<{}> = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto text-uppercase">
+          <Nav className="ml-sm-auto text-uppercase">
             <NavLink to="/" className="nav-link" activeClassName="active">
               The Difference
             </NavLink>
@@ -32,7 +33,9 @@ export const Header: React.StatelessComponent<{}> = () => {
             >
               Contact
             </NavLink>
-            <img src={get_app_btn} />
+            <NavLink className="nav-link" to="/getTheApp">
+              <img src={get_app_btn} />
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

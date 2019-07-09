@@ -1,5 +1,34 @@
-.Header {
-  .NavLink-active {
-    color: red;
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+.contact {
+  text-align: center;
+  color: #232146;
+}
+
+.hear {
+  font-family: 'Raleway', sans-serif;
+
+  font-size: 32px;
+  @include media-breakpoint-up(sm) {
+    font-size: 40px;
+  }
+  line-height: 35px;
+  text-align: center;
+  .you {
+    color: #da6754;
+  }
+}
+
+.touch {
+  color: #212353;
+  font-size: 15px;
+  @include media-breakpoint-up(sm) {
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rwd-break {
+    display: none;
   }
 }

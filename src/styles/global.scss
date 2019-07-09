@@ -1,26 +1,49 @@
 body {
   font-family: 'Raleway', sans-serif;
-  background: #ececec;
 }
 
 .Header {
-  margin-top: 20px;
-}
-.navbar-light .navbar-nav .nav-link {
-  font-weight: bold;
-  margin-right: 30px;
-  font-size: 13px;
-  color: black;
-  &:hover {
-    color: red;
+  margin-top: 18px;
+  .navbar-light .navbar-nav .nav-link {
+    font-weight: bold;
+    margin-right: 32px;
+    font-size: 13px;
+    color: black;
+    &:hover {
+      color: #da6754;
+    }
+    .active {
+      color: #da6754;
+    }
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+    img {
+      margin-top: -13px;
+    }
   }
-}
-.navbar-light .navbar-nav .nav-link.active {
-  color: red;
 }
 
-.navbar-nav {
-  img {
-    margin-top: -6px;
-  }
-}
+/* in case of using text instead of image*/
+
+// .get-app-button {
+//   margin-top: -7px;
+//   position: relative;
+//   .get-app-button-c {
+//     width: 100%;
+//     color: #ffffff;
+//     font-family: Raleway;
+//     font-size: 13px;
+//     font-weight: 700;
+//     line-height: 15px;
+//     text-align: center;
+//     text-transform: uppercase;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     &:hover {
+//       color: yellow;
+//     }
+//   }
+// }
