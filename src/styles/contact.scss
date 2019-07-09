@@ -21,9 +21,9 @@
 
 .touch {
   color: #212353;
-  font-size: 15px;
+  font-size: 12.5px;
   @include media-breakpoint-up(sm) {
-    font-size: 12.5px;
+    font-size: 15px;
   }
 }
 
@@ -31,4 +31,44 @@
   .rwd-break {
     display: none;
   }
+}
+
+.social-area {
+  .social-icons {
+    .social-icon-border {
+      &:not(:last-child) {
+        margin-right: 19px;
+      }
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border: #da6754 solid 1px;
+      display: inline-block;
+      &:hover {
+        background: #000000;
+      }
+      .social-icon {
+        width: 23px;
+        height: 23px;
+        margin-top: 15px;
+        color: #da6754;
+      }
+    }
+  }
+}
+
+.download-area {
+  position: relative;
+  .bg-lady {
+    width: 100%;
+  }
+}
+
+.front_mountain {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  position: absolute;
+  top: calc(100vw * 195 / 1400);
 }

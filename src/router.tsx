@@ -1,18 +1,19 @@
 import * as React from 'react'
 import { Route, HashRouter, Switch } from 'react-router-dom'
 import { App } from './app'
-import { About, MembersPage, Contact } from './components'
+import { Header, About, Footer, Contact } from './components'
 
 export const AppRouter: React.StatelessComponent<{}> = () => {
   return (
     <HashRouter>
-      <div className="container-fluid">
-        <Route component={App} />
+      <div className="">
+        <Header />
         <Switch>
           <Route exact path="/" component={About} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
         </Switch>
+        <Footer />
       </div>
     </HashRouter>
   )

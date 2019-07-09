@@ -1,0 +1,12 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+.Footer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 50px;
+  @include media-breakpoint-up(sm) {
+    transform: translate(0, -78px);
+  }
+}
