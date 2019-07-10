@@ -1,11 +1,14 @@
 import * as React from 'react'
 import '../styles/global.scss'
 import '../styles/contact.scss'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+  faTwitter,
   faFacebookF,
   faTelegramPlane
 } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 import lady_watering_plant from '../images/lady_watering_plant.png'
 import bg_mountain_front_landscape from '../images/bg_mountain_front_landscape.png'
@@ -35,10 +38,10 @@ export const Contact: React.StatelessComponent<{}> = () => {
           <div className="col">
             <div className="social-icons">
               <div className="social-icon-border">
-                <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
+                <FontAwesomeIcon icon={faEnvelope} className="social-icon" />
               </div>
               <div className="social-icon-border">
-                <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
+                <FontAwesomeIcon icon={faTwitter} className="social-icon" />
               </div>
               <div className="social-icon-border">
                 <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
