@@ -3,6 +3,9 @@
 .contact {
   text-align: center;
   color: #232146;
+  img {
+    width: 100%;
+  }
 }
 
 .hear {
@@ -55,20 +58,4 @@
       }
     }
   }
-}
-
-.download-area {
-  position: relative;
-  .bg-lady {
-    width: 100%;
-  }
-}
-
-.front_mountain {
-  width: 100%;
-  img {
-    width: 100%;
-  }
-  position: absolute;
-  top: calc(100vw * 195 / 1400);
 }

@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
 import '../styles/global.scss'
 import '../styles/contact.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -54,20 +53,7 @@ export const Contact: React.StatelessComponent<{}> = () => {
           </div>
         </div>
       </div>
-      <div className="download-area">
-        <img src={lady_watering_plant} className="bg-lady" />
-        <ResponsiveImage className="front_mountain">
-          <ResponsiveImageSize
-            default
-            minWidth={0}
-            path={'/src/images/bg_mountain_front_mobile.png'}
-          />
-          <ResponsiveImageSize
-            minWidth={768}
-            path={'/src/images/bg_mountain_front_landscape.png'}
-          />
-        </ResponsiveImage>
-      </div>
+      <img src={lady_watering_plant} className="" />
     </div>
   )
 }

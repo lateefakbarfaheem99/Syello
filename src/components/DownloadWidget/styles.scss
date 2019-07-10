@@ -1,7 +1,43 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
 .DownloadWidget {
-  //  position: absolute;
-  //  top: calc(100vw * 322 / 1440);
-  img {
-    transform: translate(20px, 0);
+  margin-top: -250px;
+  @include media-breakpoint-up(sm) {
+    margin-top: calc(-271 * 100vw / 1440);
   }
+  .caption {
+    display: flex;
+    justify-content: center;
+    img {
+      transform: translate(20px, 0);
+    }
+  }
+  .stores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+    @include media-breakpoint-down(sm) {
+      & > :first-child {
+        margin-bottom: 25px;
+      }
+    }
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
+      & > :first-child {
+        margin-right: 9px;
+      }
+      & > :last-child {
+        margin-left: 9px;
+      }
+    }
+    img {
+      &:hover {
+        -webkit-filter: invert(0.8);
+        filter: invert(0.8);
+      }
+    }
+  }
+  padding-bottom: 118px;
 }
