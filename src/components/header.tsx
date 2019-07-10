@@ -21,7 +21,11 @@ export const Header: React.StatelessComponent<{}> = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-sm-auto text-uppercase">
-              <NavLink to="/" className="nav-link" activeClassName="active">
+              <NavLink
+                to="/theDifference"
+                className="nav-link"
+                activeClassName="active"
+              >
                 The Difference
               </NavLink>
               <NavLink to="/blog" className="nav-link" activeClassName="active">

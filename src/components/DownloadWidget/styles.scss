@@ -1,10 +1,6 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 .DownloadWidget {
-  margin-top: -250px;
-  @include media-breakpoint-up(sm) {
-    margin-top: calc(-271 * 100vw / 1440);
-  }
   .caption {
     display: flex;
     justify-content: center;

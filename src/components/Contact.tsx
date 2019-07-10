@@ -1,4 +1,6 @@
 import * as React from 'react'
+import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
+
 import '../styles/global.scss'
 import '../styles/contact.scss'
 
@@ -13,7 +15,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import lady_watering_plant from '../images/lady_watering_plant.png'
 import bg_mountain_front_landscape from '../images/bg_mountain_front_landscape.png'
 import bg_mountain_front_mobile from '../images/bg_mountain_front_mobile.png'
-
 const small = bg_mountain_front_mobile
 const large = bg_mountain_front_landscape
 
@@ -56,7 +57,17 @@ export const Contact: React.StatelessComponent<{}> = () => {
           </div>
         </div>
       </div>
-      <img src={lady_watering_plant} className="" />
+      <ResponsiveImage className="">
+        <ResponsiveImageSize
+          default
+          minWidth={0}
+          path={'/src/images/contact_bg_mobile.png'}
+        />
+        <ResponsiveImageSize
+          minWidth={576}
+          path={'/src/images/contact_bg_landscape.png'}
+        />
+      </ResponsiveImage>
     </div>
   )
 }
