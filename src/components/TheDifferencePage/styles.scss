@@ -1,4 +1,77 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 .TheDifferencePage {
+  color: #212353;
+  .line_break_landscape {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .not_average {
+    margin-top: 34px;
+
+    .big_text {
+      margin-bottom: 25px;
+      line-height: 35px;
+      font-size: 32px;
+      .messenger {
+        color: #da6754;
+      }
+    }
+    .difference_top_bg {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    .text {
+      font-size: 12.5px;
+      font-weight: 500;
+      line-height: 19.6px;
+
+      .top_half {
+        margin-bottom: 19px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .TheDifferencePage {
+    .line_break_landscape {
+      display: initial;
+    }
+
+    .not_average {
+      margin-top: 97px;
+      .line_break_mobile {
+        display: none;
+      }
+      .big_text {
+        margin-bottom: 15px;
+        line-height: 56px;
+        font-size: 40px;
+      }
+      .difference_top_bg {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+      .content_area {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .text {
+        top: 0;
+        position: absolute;
+
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 28px;
+        .top_half {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
