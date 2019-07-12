@@ -8,6 +8,15 @@ import peer_to_peer from '../../images/peer_to_peer.png'
 import get_app_btn from '../../images/get_app_btn.png'
 import bullet from '../../images/bullet.png'
 
+import storage_mobile from '../../images/storage_mobile.png'
+import storage from '../../images/storage.png'
+
+import token_mobile from '../../images/token_mobile.png'
+import token from '../../images/token.png'
+
+import the_difference_footer_bg_mobile from '../../images/the_difference_footer_bg_mobile.png'
+import the_difference_footer_bg from '../../images/the_difference_footer_bg.png'
+
 const TheDifferencePage: React.StatelessComponent<{}> = () => {
   return (
     <div className="TheDifferencePage">
@@ -101,15 +110,8 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
           </div>
         </div>
         <ResponsiveImage className="storage_img">
-          <ResponsiveImageSize
-            default
-            minWidth={0}
-            path={'/src/images/storage_mobile.png'}
-          />
-          <ResponsiveImageSize
-            minWidth={576}
-            path={'/src/images/storage.png'}
-          />
+          <ResponsiveImageSize default minWidth={0} path={storage_mobile} />
+          <ResponsiveImageSize minWidth={576} path={storage} />
         </ResponsiveImage>
       </div>
       <div className="token">
@@ -141,24 +143,17 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
           </div>
         </div>
         <ResponsiveImage className="token_img">
-          <ResponsiveImageSize
-            default
-            minWidth={0}
-            path={'/src/images/token_mobile.png'}
-          />
-          <ResponsiveImageSize minWidth={576} path={'/src/images/token.png'} />
+          <ResponsiveImageSize default minWidth={0} path={token_mobile} />
+          <ResponsiveImageSize minWidth={576} path={token} />
         </ResponsiveImage>
       </div>
       <ResponsiveImage className="footer_adaptive_bg">
         <ResponsiveImageSize
           default
           minWidth={0}
-          path={'/src/images/the_difference_footer_bg_mobile.png'}
+          path={the_difference_footer_bg_mobile}
         />
-        <ResponsiveImageSize
-          minWidth={576}
-          path={'/src/images/the_difference_footer_bg.png'}
-        />
+        <ResponsiveImageSize minWidth={576} path={the_difference_footer_bg} />
       </ResponsiveImage>
     </div>
   )

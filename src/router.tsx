@@ -3,7 +3,7 @@ import { Route, HashRouter, Switch } from 'react-router-dom'
 import { App } from './app'
 import { Header, About, Footer, Contact } from './components'
 import TheDifferencePage from './components/TheDifferencePage'
-import HomePage from './components/HomePage'
+import HomePage from './components/Home/HomePage'
 
 export const AppRouter: React.StatelessComponent<{}> = () => {
   return (

@@ -12,11 +12,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-import lady_watering_plant from '../images/lady_watering_plant.png'
-import bg_mountain_front_landscape from '../images/bg_mountain_front_landscape.png'
 import bg_mountain_front_mobile from '../images/bg_mountain_front_mobile.png'
-const small = bg_mountain_front_mobile
-const large = bg_mountain_front_landscape
+import contact_bg_mobile from '../images/contact_bg_mobile.png'
+import contact_bg_landscape from '../images/contact_bg_landscape.png'
 
 export const Contact: React.StatelessComponent<{}> = () => {
   return (
@@ -25,7 +23,9 @@ export const Contact: React.StatelessComponent<{}> = () => {
         <div className="row justify-content-center">
           <div className="hear col col-lg-8 pt-5 mt-lg-5">
             We'd love to hear
-            <br className="rwd-break" /> from <span className="you">you</span>
+            <br className="rwd-break" /> from
+            {console.log(bg_mountain_front_mobile)}{' '}
+            <span className="you">you</span>
           </div>
         </div>
         <div className="row justify-content-center">
@@ -58,15 +58,8 @@ export const Contact: React.StatelessComponent<{}> = () => {
         </div>
       </div>
       <ResponsiveImage className="">
-        <ResponsiveImageSize
-          default
-          minWidth={0}
-          path={'/src/images/contact_bg_mobile.png'}
-        />
-        <ResponsiveImageSize
-          minWidth={576}
-          path={'/src/images/contact_bg_landscape.png'}
-        />
+        <ResponsiveImageSize default minWidth={0} path={contact_bg_mobile} />
+        <ResponsiveImageSize minWidth={576} path={contact_bg_landscape} />
       </ResponsiveImage>
     </div>
   )
