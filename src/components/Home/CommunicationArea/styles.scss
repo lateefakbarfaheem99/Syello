@@ -1,6 +1,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 .CommunicationArea {
+  margin-bottom: 98px;
   .landscape_head_text {
     display: none;
   }
@@ -90,6 +91,8 @@
 @include media-breakpoint-up(lg) {
   .CommunicationArea {
     position: relative;
+    margin-bottom: 166px;
+
     .communication_bg {
       img {
         display: block;

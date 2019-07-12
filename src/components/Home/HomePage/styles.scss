@@ -2,4 +2,53 @@
 
 .HomePage {
   margin-top: 46px;
+  .watching_area {
+    margin-bottom: 158px;
+    text-align: center;
+    .text {
+      margin-bottom: 45px;
+      .heading {
+        font-size: 32px;
+        line-height: 56px;
+      }
+      .content {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+    }
+    .watching_img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .HomePage {
+    .watching_area {
+      margin-bottom: 186px;
+      text-align: left;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      .text {
+        margin-bottom: 0;
+        order: 2;
+        width: 50%;
+        .heading,
+        .content {
+          margin: 0 15% 0 20%;
+        }
+      }
+      .watching_img {
+        width: 50%;
+        order: 1;
+        img {
+          margin-right: 20%;
+        }
+      }
+    }
+  }
 }
