@@ -23,6 +23,28 @@
       }
     }
   }
+  .identity_area {
+    .text {
+      text-align: center;
+      margin: 0 10%;
+      .heading {
+        margin-bottom: 30px;
+        font-size: 32px;
+        line-height: 56px;
+      }
+      .content {
+        font-size: 13px;
+        line-height: 28px;
+        font-weight: 500;
+      }
+    }
+    .identity_img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
@@ -48,6 +70,30 @@
         img {
           margin-right: 20%;
         }
+      }
+    }
+    .identity_area {
+      display: flex;
+      align-items: center;
+      .text {
+        margin: 0 7% 0 13%;
+        width: 30%;
+        text-align: left;
+        .heading {
+          margin-bottom: 27px;
+
+          font-size: 40px;
+          line-height: 56px;
+        }
+        .content {
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 28px;
+        }
+      }
+      .identity_img {
+        width: 50%;
+        margin: 0 0 0 0;
       }
     }
   }

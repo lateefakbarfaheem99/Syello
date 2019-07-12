@@ -8,6 +8,9 @@ import './styles.scss'
 import home_watching_mobile from '../../../images/home_watching_mobile.png'
 import home_watching_landscape from '../../../images/home_watching_landscape.png'
 
+import identity_home_mobile from '../../../images/identity_home_mobile.png'
+import identity_home_landscape from '../../../images/identity_home_landscape.png'
+
 const HomePage: React.StatelessComponent<{}> = () => {
   return (
     <div className="HomePage">
@@ -31,6 +34,26 @@ const HomePage: React.StatelessComponent<{}> = () => {
             path={home_watching_mobile}
           />
           <ResponsiveImageSize minWidth={576} path={home_watching_landscape} />
+        </ResponsiveImage>
+      </div>
+      <div className="identity_area">
+        <div className="text">
+          <div className="heading">
+            Own <span className="color_red">your</span> identity
+          </div>
+          <div className="content">
+            Reclaim control of your digital identity. You choose what personal
+            information you share with who and on what terms. Sylo's default
+            setting is complete privacy. Everything else is up to you.
+          </div>
+        </div>
+        <ResponsiveImage className="identity_img">
+          <ResponsiveImageSize
+            default
+            minWidth={0}
+            path={identity_home_mobile}
+          />
+          <ResponsiveImageSize minWidth={576} path={identity_home_landscape} />
         </ResponsiveImage>
       </div>
     </div>
