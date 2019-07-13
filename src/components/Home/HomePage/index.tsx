@@ -17,6 +17,9 @@ import choice_home_landscape from '../../../images/choice_home_landscape.png'
 import Ben_thumb from '../../../images/Ben_thumb.png'
 import Dorian_thumb from '../../../images/Dorian_thumb.png'
 
+import foot_home_mobile from '../../../images/foot_home_mobile.png'
+import foot_home_landscape from '../../../images/foot_home_landscape.png'
+
 const HomePage: React.StatelessComponent<{}> = () => {
   return (
     <div className="HomePage">
@@ -115,6 +118,12 @@ const HomePage: React.StatelessComponent<{}> = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="foot_img_area">
+        <ResponsiveImage className="foot_img">
+          <ResponsiveImageSize default minWidth={0} path={foot_home_mobile} />
+          <ResponsiveImageSize minWidth={576} path={foot_home_landscape} />
+        </ResponsiveImage>
       </div>
     </div>
   )

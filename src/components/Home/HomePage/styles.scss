@@ -134,6 +134,12 @@
       }
     }
   }
+  .foot_img_area {
+    margin-top: 93px;
+    img {
+      width: 100%;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
@@ -233,6 +239,9 @@
           }
         }
       }
+    }
+    .foot_img_area {
+      margin-top: 0;
     }
   }
 }
