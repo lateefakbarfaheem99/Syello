@@ -11,6 +11,9 @@ import home_watching_landscape from '../../../images/home_watching_landscape.png
 import identity_home_mobile from '../../../images/identity_home_mobile.png'
 import identity_home_landscape from '../../../images/identity_home_landscape.png'
 
+import choice_home_mobile from '../../../images/choice_home_mobile.png'
+import choice_home_landscape from '../../../images/choice_home_landscape.png'
+
 const HomePage: React.StatelessComponent<{}> = () => {
   return (
     <div className="HomePage">
@@ -55,6 +58,18 @@ const HomePage: React.StatelessComponent<{}> = () => {
           />
           <ResponsiveImageSize minWidth={576} path={identity_home_landscape} />
         </ResponsiveImage>
+      </div>
+      <div className="choice_area">
+        <ResponsiveImage className="choice_img">
+          <ResponsiveImageSize default minWidth={0} path={choice_home_mobile} />
+          <ResponsiveImageSize minWidth={576} path={choice_home_landscape} />
+        </ResponsiveImage>
+        <div className="over_img">
+          <div className="text_container">
+            <div className="heading">It's your choice</div>
+            <div className="why_btn">Why Sylo?</div>
+          </div>
+        </div>
       </div>
     </div>
   )
