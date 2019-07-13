@@ -114,6 +114,13 @@
             .react-player__play-icon {
               border-width: 10px 0px 10px 16px !important;
             }
+            &:hover {
+              border-color: white;
+              background: white;
+              .react-player__play-icon {
+                border-color: transparent transparent transparent #f75a31 !important;
+              }
+            }
           }
         }
       }
