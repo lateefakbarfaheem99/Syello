@@ -47,6 +47,7 @@
   }
   .choice_area {
     position: relative;
+    margin-bottom: 129px;
     .choice_img {
       width: 100%;
       img {
@@ -83,6 +84,52 @@
         &:hover {
           background: white;
           color: #da6754;
+        }
+      }
+    }
+  }
+  .video_area {
+    display: flex;
+    flex-flow: row wrap;
+    & > :first-child {
+      margin-bottom: 47px;
+    }
+    .video_container {
+      width: 100%;
+      .video_widget {
+        border-radius: 5px;
+        width: 100% !important;
+        height: 194px !important;
+        margin-bottom: 17px;
+        display: flex;
+        justify-content: center;
+        .react-player__preview {
+          width: 317px !important;
+          height: 194px !important;
+          background-size: cover !important;
+          .react-player__shadow {
+            border-radius: 50%;
+            border: 10px solid #f75a31;
+            background: #f75a31 !important;
+            .react-player__play-icon {
+              border-width: 10px 0px 10px 16px !important;
+            }
+          }
+        }
+      }
+      .text_container {
+        text-align: center;
+        .heading {
+          font-size: 30px;
+          line-height: 35px;
+          margin: 0 10%;
+          margin-bottom: 18px;
+        }
+        .content {
+          font-size: 12.5px;
+          font-weight: 500;
+          line-height: 28px;
+          margin: 0 10%;
         }
       }
     }
@@ -141,12 +188,49 @@
     .choice_area {
       .over_img {
         .heading {
-          // margin-top: 230px;
           font-size: 40px;
           line-height: 56px;
         }
         .why_btn {
           font-size: 15px;
+        }
+      }
+    }
+    .video_area {
+      .video_container {
+        width: 50%;
+        margin-bottom: 62px;
+
+        .video_widget {
+          padding: 1px;
+          height: 330px !important;
+          margin-bottom: 62px;
+          .react-player__preview {
+            width: 540px !important;
+            height: 330px !important;
+            .react-player__shadow {
+              border-radius: 50%;
+              border: 50px solid #f75a31;
+              background: #f75a31 !important;
+
+              .react-player__play-icon {
+                border-width: 15px 0px 15px 26px !important;
+              }
+            }
+          }
+        }
+        .text_container {
+          text-align: left;
+          .heading {
+            font-size: 30px;
+            line-height: 35px;
+            margin-bottom: 18px;
+          }
+          .content {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 28px;
+          }
         }
       }
     }
