@@ -1,0 +1,25 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.LoadingHeader {
+  margin-top: 18px;
+  .navbar-light .navbar-nav .nav-link {
+    font-weight: bold;
+    margin-right: 32px;
+    font-size: 13px;
+    color: black;
+    &:hover {
+      color: #da6754;
+    }
+    .active {
+      color: #da6754;
+    }
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+    img {
+      margin-top: -13px;
+    }
+  }
+}
