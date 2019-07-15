@@ -8,7 +8,7 @@ import '../styles/global.scss'
 export const Header: React.StatelessComponent<{}> = () => {
   return (
     <div className="container-fluid">
-      <div className="Header row justify-content-md-center border-bottom">
+      <div className="Header row justify-content-md-center border-bottom fixed-top">
         <Navbar className="col col-sm-8" expand="sm">
           <Navbar.Brand href="#/home">
             {' '}

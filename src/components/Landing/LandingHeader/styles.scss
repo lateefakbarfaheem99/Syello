@@ -2,8 +2,9 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.LoadingHeader {
-  margin-top: 18px;
+.LandingHeader {
+  padding-top: 18px;
+  background: rgba(255, 255, 255, 0.8);
   .navbar-light .navbar-nav .nav-link {
     font-weight: bold;
     margin-right: 32px;
