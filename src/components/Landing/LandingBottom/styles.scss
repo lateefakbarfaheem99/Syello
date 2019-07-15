@@ -1,65 +1,23 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 .LandingBottom {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 0 13%;
+  .box_area {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 13%;
 
-  .box_content {
-    width: 100%;
-    margin-bottom: 32px;
-    padding: 28px 0;
-    border: 1px solid #fefefe;
-    border-radius: 15px;
-    box-shadow: 3px 3px 5px 6px #eee;
-    transition: 0.5s;
-    .icon_border {
-      width: 57px;
-      height: 57px;
-      display: flex;
-      margin: 0 auto;
-      border-radius: 50%;
-      border-color: #f1f6fc;
-      border-style: solid;
-      background: #f1f6fc;
-      justify-content: center;
-      align-items: center;
-    }
-    .text {
-      text-align: center;
-      margin: 0 10%;
-      margin-top: 20px;
-      .header {
-        font-size: 12.8px;
-        font-weight: 600;
-        line-height: 23.2px;
-        margin-bottom: 9px;
-      }
-      .content {
-        font-size: 10.4px;
-        line-height: 12.2px;
-        font-weight: 500;
-      }
-    }
-  }
-}
-
-@include media-breakpoint-up(md) {
-  .LandingBottom {
-    justify-content: space-between;
     .box_content {
-      width: 30%;
-      margin: 0 0%;
+      width: 100%;
       margin-bottom: 32px;
-      padding: 38px 0;
+      padding: 28px 0;
       border: 1px solid #fefefe;
       border-radius: 15px;
       box-shadow: 3px 3px 5px 6px #eee;
       transition: 0.5s;
       .icon_border {
-        width: 71px;
-        height: 71px;
+        width: 57px;
+        height: 57px;
         display: flex;
         margin: 0 auto;
         border-radius: 50%;
@@ -74,16 +32,87 @@
         margin: 0 10%;
         margin-top: 20px;
         .header {
-          font-size: 16px;
+          font-size: 12.8px;
           font-weight: 600;
-          line-height: 29px;
-          margin-bottom: 25px;
+          line-height: 23.2px;
+          margin-bottom: 9px;
         }
         .content {
-          font-size: 13px;
-          line-height: 24px;
+          font-size: 10.4px;
+          line-height: 12.2px;
           font-weight: 500;
         }
+      }
+    }
+  }
+  .pay_area {
+    margin-top: 60px;
+    .text {
+      text-align: center;
+      font-size: 32.4px;
+      font-weight: 50.4px;
+      margin: 0 13%;
+      margin-bottom: 77px;
+    }
+    .landing_foot {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .LandingBottom {
+    .box_area {
+      justify-content: space-between;
+      .box_content {
+        width: 30%;
+        margin: 0 0%;
+        margin-bottom: 32px;
+        padding: 38px 0;
+        border: 1px solid #fefefe;
+        border-radius: 15px;
+        box-shadow: 3px 3px 5px 6px #eee;
+        transition: 0.5s;
+        .icon_border {
+          width: 71px;
+          height: 71px;
+          display: flex;
+          margin: 0 auto;
+          border-radius: 50%;
+          border-color: #f1f6fc;
+          border-style: solid;
+          background: #f1f6fc;
+          justify-content: center;
+          align-items: center;
+        }
+        .text {
+          text-align: center;
+          margin: 0 10%;
+          margin-top: 20px;
+          .header {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 29px;
+            margin-bottom: 25px;
+          }
+          .content {
+            font-size: 13px;
+            line-height: 24px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .pay_area {
+      margin-top: 60px;
+      .text {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 56px;
+        margin: 0 28%;
+        margin-bottom: 112px;
       }
     }
   }
