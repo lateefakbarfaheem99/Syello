@@ -22,24 +22,28 @@ export const AppRouter: React.StatelessComponent<{}> = () => {
   return (
     <HashRouter>
       <div className="">
-        {routes.map(route => (
-          <Route
-            key={route.path}
-            path={route.path}
-            exact={route.exact}
-            component={route.is_head_neccessary ? () => <Header /> : null}
-          />
-        ))}
-        {routes.map(route => (
-          <Route
-            key={route.path}
-            path={route.path}
-            exact={route.exact}
-            component={route.main}
-          />
-        ))}
-        <Route component={Header} />
-        <Route component={HomePage} />
+        <Switch>
+          {routes.map(route => (
+            <Route
+              key={route.path}
+              path={route.path}
+              exact={route.exact}
+              component={route.is_head_neccessary ? () => <Header /> : null}
+            />
+          ))}
+          <Route component={Header} />
+        </Switch>
+        <Switch>
+          {routes.map(route => (
+            <Route
+              key={route.path}
+              path={route.path}
+              exact={route.exact}
+              component={route.main}
+            />
+          ))}
+          <Route component={HomePage} />
+        </Switch>
         <Footer />
       </div>
     </HashRouter>
