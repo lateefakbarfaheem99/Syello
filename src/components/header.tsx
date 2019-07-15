@@ -10,7 +10,7 @@ export const Header: React.StatelessComponent<{}> = () => {
     <div className="container-fluid">
       <div className="Header row justify-content-md-center border-bottom">
         <Navbar className="col col-sm-8" expand="sm">
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="#/home">
             {' '}
             <img
               src={logo}
@@ -22,7 +22,7 @@ export const Header: React.StatelessComponent<{}> = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-sm-auto text-uppercase">
               <NavLink
-                to="/theDifference"
+                to="/difference"
                 className="nav-link"
                 activeClassName="active"
               >
