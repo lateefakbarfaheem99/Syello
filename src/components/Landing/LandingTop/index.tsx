@@ -24,14 +24,32 @@ const LandingTop: React.StatelessComponent<{}> = () => {
   return (
     <div className="LandingTop">
       <div className="text_area">
-        <div className="heading">A BETTER WAY TO CONNECT</div>
-        <div className="content">
-          <span className="color_red">Private</span> messaging like never before
-        </div>
-        <div className="store_buttons">
-          <img src={app_store_landing} />
-          <img src={google_play_landing} />
-        </div>
+        <Animated
+          animationIn="slideInUpCustom"
+          animationOut="fadeOut"
+          animationInDelay={500}
+          animationInDuration={500}
+          isVisible={true}
+        >
+          <div className="heading">A BETTER WAY TO CONNECT</div>
+          <div className="content">
+            <span className="color_red">Private</span> messaging
+            <br className="rwd-break" /> like never before
+          </div>
+        </Animated>
+
+        <Animated
+          animationIn="fadeIn"
+          animationOut="fadeOut"
+          animationInDelay={1000}
+          animationInDuration={1000}
+          isVisible={true}
+        >
+          <div className="store_buttons">
+            <img src={app_store_landing} className="app_store" />
+            <img src={google_play_landing} className="google_store" />
+          </div>
+        </Animated>
       </div>
 
       <div className="image_area">
