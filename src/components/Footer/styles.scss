@@ -18,12 +18,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      a{
+        color: #232757;
+        &:hover {
+          color: #f15b29;
+          text-decoration:none;
+          img{
+            filter: invert(48%) sepia(43%) saturate(3856%) hue-rotate(343deg) brightness(95%) contrast(99%);
+          }
+        }
+        & > :not(:last-child) {
+          padding-right: 11px;
+        }
+        span {
+          font-size: 13px;
+        }
 
-      & > :not(:last-child) {
-        padding-right: 11px;
-      }
-      span {
-        font-size: 13px;
       }
     }
     .introduction_text_area {
@@ -91,7 +101,9 @@
       & > :not(:last-child) {
         margin-right: 26px;
       }
-
+      .policy:hover{
+        color: #df4a43;
+      }
       span {
         font-size: 13px;
       }

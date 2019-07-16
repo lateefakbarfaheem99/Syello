@@ -9,15 +9,18 @@ import download_ios_btn_hover from '../../../images/download_ios_btn_hover.png'
 import download_android_btn_normal from '../../../images/download_android_btn_normal.png'
 import download_android_btn_hover from '../../../images/download_android_btn_hover.png'
 
-import { Button, Navbar, Nav, NavItem } from 'react-bootstrap'
+import get_the_app_btn_normal from '../../../images/get_the_app_btn_normal.png'
+import get_the_app_btn_hover from '../../../images/get_the_app_btn_hover.png'
+
+import { Navbar, Nav } from 'react-bootstrap'
 import './styles.scss'
 
 const LandingHeader: React.StatelessComponent<{}> = () => {
   return (
     <div className="container-fluid">
-      <div className="LandingHeader row justify-content-md-center border-bottom">
-        <Navbar className="col col-sm-9" expand="sm">
-          <Navbar.Brand href="#">
+      <div className="LandingHeader row justify-content-center border-bottom fixed-top">
+        <Navbar className="col-10 col-sm-8" expand="sm">
+          <Navbar.Brand href="#/home">
             {' '}
             <img
               src={logo}
@@ -25,17 +28,32 @@ const LandingHeader: React.StatelessComponent<{}> = () => {
               alt="React Bootstrap logo"
             />
           </Navbar.Brand>
-          <Nav className="ml-sm-auto text-uppercase">
-            <NavLink className="nav-link" to="/getTheApp">
+          <Nav className="ml-sm-auto">
+            <a
+              href="https://testflight.apple.com/join/1LJpzNNN"
+              target="_blank"
+              className="nav-link landscape"
+            >
               <HoverImage
                 src={download_ios_btn_normal}
                 hoverSrc={download_ios_btn_hover}
               />
-            </NavLink>
-            <NavLink className="nav-link" to="/getTheApp">
+            </a>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=io.sylo.dapp"
+              target="_blank"
+              className="nav-link landscape"
+            >
               <HoverImage
                 src={download_android_btn_normal}
                 hoverSrc={download_android_btn_hover}
+              />
+            </a>
+            <NavLink className="nav-link mobile" to="/">
+              <HoverImage
+                src={get_the_app_btn_normal}
+                hoverSrc={get_the_app_btn_hover}
               />
             </NavLink>
           </Nav>

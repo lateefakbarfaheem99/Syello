@@ -1,5 +1,6 @@
 import * as React from 'react'
 import DownloadWidget from '../DownloadWidget'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTwitter,
@@ -14,7 +15,7 @@ import {
 
 import './styles.scss'
 
-import gecko from '../../images/Gecko.png'
+import gecko from '../../images/Gecko.svg'
 export const Footer: React.StatelessComponent<{}> = () => {
   return (
     <div className="Footer">
@@ -23,8 +24,11 @@ export const Footer: React.StatelessComponent<{}> = () => {
       </div>
       <div className="bottom_line">
         <div className="gecko_area">
+        <a href="https://medium.com/sylo-io/sylo-awarded-the-worlds-first-official-ico-compliance-stamp-by-gecko-governance-e039b4423246" target="_blank">
+
           <img src={gecko} />
           <span>Gecko Accredited</span>
+          </a>
         </div>
         <div className="introduction_text_area">
           <span>Whitepaper</span>
@@ -33,20 +37,39 @@ export const Footer: React.StatelessComponent<{}> = () => {
         </div>
         <div className="social_icon_area">
           <div className="up">
-            <FontAwesomeIcon icon={faTwitter} className="social_icon" />
-            <FontAwesomeIcon icon={faFacebookF} className="social_icon" />
-            <FontAwesomeIcon icon={faMediumM} className="social_icon" />
-            <FontAwesomeIcon icon={faLinkedinIn} className="social_icon" />
+            <a href="https://twitter.com/sylo" target="_blank">
+              <FontAwesomeIcon icon={faTwitter} className="social_icon" />
+            </a>
+            <a href="https://www.facebook.com/sylo.io" target="_blank">
+              <FontAwesomeIcon icon={faFacebookF} className="social_icon" />
+            </a>
+            <a href="https://medium.com/sylo-io" target="_blank">
+              <FontAwesomeIcon icon={faMediumM} className="social_icon" />
+            </a>
+            <a href="https://www.linkedin.com/company/sylo.io" target="_blank">
+              <FontAwesomeIcon icon={faLinkedinIn} className="social_icon" />
+            </a>
           </div>
           <div className="down">
-            <FontAwesomeIcon icon={faYoutube} className="social_icon" />
-            <FontAwesomeIcon icon={faTelegramPlane} className="social_icon" />
-            <FontAwesomeIcon icon={faRedditAlien} className="social_icon" />
-            <FontAwesomeIcon icon={faBtc} className="social_icon" />
+            <a href="https://www.youtube.com/c/sylo_io" target="_blank">
+              <FontAwesomeIcon icon={faYoutube} className="social_icon" />
+            </a>
+            <a href="https://t.me/sylo_io" target="_blank">
+              <FontAwesomeIcon icon={faTelegramPlane} className="social_icon" />
+            </a>
+            <a href="https://www.reddit.com/r/sylo_io" target="_blank">
+              <FontAwesomeIcon icon={faRedditAlien} className="social_icon" />
+            </a>
+            <a
+              href="https://bitcointalk.org/index.php?topic=5034972"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faBtc} className="social_icon" />
+            </a>
           </div>
         </div>
         <div className="privacy_area">
-          <span>Privacy Policy</span>
+          <span className="policy">Privacy Policy</span>
           <span>© Sylo</span>
         </div>
       </div>

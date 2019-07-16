@@ -13,8 +13,15 @@ const DownloadWidget: React.StatelessComponent<{}> = () => {
       </div>
       <div className="container">
         <div className="stores">
-          <img src={google_play_store} />
-          <img src={apple_app_store} />
+          <a
+            href="https://play.google.com/store/apps/details?id=io.sylo.dapp"
+            target="_blank"
+          >
+            <img src={google_play_store} />
+          </a>
+          <a href="https://testflight.apple.com/join/1LJpzNNN" target="_blank">
+            <img src={apple_app_store} />
+          </a>
         </div>
       </div>
     </div>

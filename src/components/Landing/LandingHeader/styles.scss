@@ -1,13 +1,13 @@
-body {
-  font-family: 'Raleway', sans-serif;
-}
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 .LandingHeader {
-  padding-top: 18px;
+  padding: 12px 0;
   background: rgba(255, 255, 255, 0.8);
   .navbar-light .navbar-nav .nav-link {
     font-weight: bold;
-    margin-right: 32px;
+    &:first {
+      margin-right: 32px;
+    }
     font-size: 13px;
     color: black;
     &:hover {
@@ -16,11 +16,17 @@ body {
     .active {
       color: #da6754;
     }
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 20px;
-    img {
-      margin-top: -13px;
-    }
+  }
+  .landscape {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navbar-light .navbar-nav .nav-link.landscape {
+    display: inherit;
+  }
+  .navbar-light .navbar-nav .nav-link.mobile {
+    display: none;
   }
 }

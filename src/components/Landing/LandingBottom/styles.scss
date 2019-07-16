@@ -73,6 +73,7 @@
     }
   }
   .pay_area {
+    z-index: 1001;
     margin-top: 60px;
     .text {
       text-align: center;
@@ -176,7 +177,7 @@
       }
     }
     .pay_area {
-      margin-top: 250px;
+      margin-top: 20%;
       .text {
         font-size: 40px;
         font-weight: 56px;

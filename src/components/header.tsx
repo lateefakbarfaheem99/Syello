@@ -1,15 +1,19 @@
 import * as React from 'react'
 import { NavLink } from 'react-router-dom'
+import HoverImage from 'react-hover-image'
+
+import get_the_app_btn_normal from '../images/get_the_app_btn_normal.png'
+import get_the_app_btn_hover from '../images/get_the_app_btn_hover.png'
+
 import logo from '../images/logo.png'
-import get_app_btn from '../images/get_app_btn.png'
-import { Button, Navbar, Nav, NavItem } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 import '../styles/global.scss'
 
 export const Header: React.StatelessComponent<{}> = () => {
   return (
     <div className="container-fluid">
-      <div className="Header row justify-content-md-center border-bottom fixed-top">
-        <Navbar className="col col-sm-8" expand="sm">
+      <div className="Header row justify-content-center border-bottom fixed-top">
+        <Navbar className="col-10 col-sm-8" expand="sm">
           <Navbar.Brand href="#/home">
             {' '}
             <img
@@ -38,8 +42,11 @@ export const Header: React.StatelessComponent<{}> = () => {
               >
                 Contact
               </NavLink>
-              <NavLink className="nav-link" to="/getTheApp">
-                <img src={get_app_btn} />
+              <NavLink className="nav-link" to="/">
+                <HoverImage
+                  src={get_the_app_btn_normal}
+                  hoverSrc={get_the_app_btn_hover}
+                />
               </NavLink>
             </Nav>
           </Navbar.Collapse>
