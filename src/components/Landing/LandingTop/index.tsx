@@ -27,7 +27,7 @@ const LandingTop: React.StatelessComponent<{}> = () => {
         <Animated
           animationIn="slideInUpCustom"
           animationOut="fadeOut"
-          animationInDelay={500}
+          animationInDelay={0}
           animationInDuration={500}
           isVisible={true}
         >

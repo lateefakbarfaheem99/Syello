@@ -16,12 +16,27 @@ import shield_icon from '../../../images/shield_icon.png'
 import landing_foot_mobile from '../../../images/landing_foot_mobile.png'
 import landing_foot_landscape from '../../../images/landing_foot_landscape.png'
 
+import balloon_with_spacecraft_mobile from '../../../images/balloon_with_spacecraft_mobile.png'
+import balloon_with_spacecraft_landscape from '../../../images/balloon_with_spacecraft_landscape.png'
+
 import './styles.scss'
 import '../../../styles/global.scss'
 
 const LandingBottom: React.StatelessComponent<{}> = () => {
   return (
     <div className="LandingBottom">
+      {' '}
+      <ResponsiveImage className="landing_balloon">
+        <ResponsiveImageSize
+          default
+          minWidth={0}
+          path={balloon_with_spacecraft_mobile}
+        />
+        <ResponsiveImageSize
+          minWidth={576}
+          path={balloon_with_spacecraft_landscape}
+        />
+      </ResponsiveImage>
       <div className="box_area">
         <div className="box_content">
           <div className="icon_border">

@@ -1,20 +1,47 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 .LandingBottom {
+  position: relative;
+  .landing_balloon {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    img {
+      width: 100%;
+    }
+  }
+
   .box_area {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 0 13%;
-
+    margin: 0 11%;
+    padding-top: 178px;
+    img {
+      width: 100%;
+    }
     .box_content {
+      background: white;
+      z-index: 1000;
       width: 100%;
       margin-bottom: 32px;
       padding: 28px 0;
       border: 1px solid #fefefe;
       border-radius: 15px;
-      box-shadow: 3px 3px 5px 6px #eee;
+      box-shadow: -2px -3px 25px 2px #ddd;
       transition: 0.5s;
+      &:hover {
+        background: #f75a31;
+        .icon_border {
+          border-color: #fff5ec;
+          background: #fff5ec;
+        }
+        .text {
+          color: #fff5ec;
+        }
+      }
       .icon_border {
         width: 57px;
         height: 57px;
@@ -62,22 +89,23 @@
   }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
   .LandingBottom {
     .box_area {
       justify-content: space-between;
+      margin: 0 5%;
       .box_content {
         width: 30%;
         margin: 0 0%;
         margin-bottom: 32px;
-        padding: 38px 0;
+        padding: 30px 0;
         border: 1px solid #fefefe;
         border-radius: 15px;
         box-shadow: 3px 3px 5px 6px #eee;
         transition: 0.5s;
         .icon_border {
-          width: 71px;
-          height: 71px;
+          width: 46px;
+          height: 46px;
           display: flex;
           margin: 0 auto;
           border-radius: 50%;
@@ -86,6 +114,48 @@
           background: #f1f6fc;
           justify-content: center;
           align-items: center;
+        }
+        .text {
+          text-align: center;
+          margin: 0 10%;
+          margin-top: 16px;
+          .header {
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 19px;
+            margin-bottom: 6px;
+          }
+          .content {
+            font-size: 9px;
+            line-height: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .pay_area {
+      margin-top: 50px;
+      .text {
+        text-align: center;
+        font-size: 37px;
+        font-weight: 56px;
+        margin: 0 10%;
+        margin-bottom: 112px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .LandingBottom {
+    .box_area {
+      .box_content {
+        margin-bottom: 32px;
+        padding: 38px 0;
+        .icon_border {
+          width: 71px;
+          height: 71px;
+          display: flex;
         }
         .text {
           text-align: center;
@@ -106,12 +176,11 @@
       }
     }
     .pay_area {
-      margin-top: 60px;
+      margin-top: 250px;
       .text {
-        text-align: center;
         font-size: 40px;
         font-weight: 56px;
-        margin: 0 28%;
+        margin: 0 25%;
         margin-bottom: 112px;
       }
     }

@@ -12,16 +12,17 @@ const LandingMiddle: React.StatelessComponent<{}> = () => {
     <div className="LandingMiddle">
       <div className="text_area">
         <div className="heading">
-          Your best digital life, powered by{' '}
-          <span className="color_red">Sylo</span>
+          Your best digital life,
+          <br /> powered by <span className="color_red">Sylo</span>
         </div>
         <div className="content">
-          The Sylo app creatively combines next-gen technologies to redefine
-          connection, security and privacy.
+          The Sylo app creatively combines next-gen technologies to
+          <br /> redefine connection, security and privacy.
           <br />
           <br /> We couldn't see your messages even if we wanted to.
           <br />
           <br /> Our vision is to break the cycle and empower you with choice.
+          <br />
           From design to data, you come first.
         </div>
       </div>
