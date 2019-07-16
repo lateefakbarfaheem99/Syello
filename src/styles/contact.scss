@@ -1,6 +1,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 .contact {
+  padding-top: 100px;
   text-align: center;
   color: #232146;
   img {
@@ -48,7 +49,12 @@
       border: #da6754 solid 1px;
       display: inline-block;
       &:hover {
-        background: #ff0042;
+        background: #da6754;
+        svg {
+          path {
+            fill: white;
+          }
+        }
       }
       .social-icon {
         width: 23px;

@@ -39,19 +39,27 @@ export const Contact: React.StatelessComponent<{}> = () => {
           <div className="col">
             <div className="social-icons">
               <div className="social-icon-border">
-                <FontAwesomeIcon icon={faEnvelope} className="social-icon" />
+                <a href="mailto:contact@sylo.io" target="_blank">
+                  <FontAwesomeIcon icon={faEnvelope} className="social-icon" />
+                </a>
               </div>
               <div className="social-icon-border">
-                <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+                <a href="https://twitter.com/sylo" target="_blank">
+                  <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+                </a>
               </div>
               <div className="social-icon-border">
-                <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
+                <a href="https://www.facebook.com/sylo.io" target="_blank">
+                  <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
+                </a>
               </div>
               <div className="social-icon-border">
-                <FontAwesomeIcon
-                  icon={faTelegramPlane}
-                  className="social-icon"
-                />
+                <a href="https://t.me/sylo_io" target="_blank">
+                  <FontAwesomeIcon
+                    icon={faTelegramPlane}
+                    className="social-icon"
+                  />
+                </a>
               </div>
             </div>
           </div>

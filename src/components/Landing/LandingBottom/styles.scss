@@ -17,17 +17,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 0 11%;
+    margin: 0 13%;
     padding-top: 178px;
-    img {
-      width: 100%;
-    }
     .box_content {
       background: white;
       z-index: 1000;
       width: 100%;
       margin-bottom: 32px;
-      padding: 28px 0;
+      padding: 48px 0;
       border: 1px solid #fefefe;
       border-radius: 15px;
       box-shadow: -2px -3px 25px 2px #ddd;
@@ -94,15 +91,15 @@
   .LandingBottom {
     .box_area {
       justify-content: space-between;
-      margin: 0 5%;
+      margin: 0 11%;
       .box_content {
         width: 30%;
         margin: 0 0%;
         margin-bottom: 32px;
-        padding: 30px 0;
+        padding: 3.5% 0;
         border: 1px solid #fefefe;
         border-radius: 15px;
-        box-shadow: 3px 3px 5px 6px #eee;
+        box-shadow: 3px 3px -4px 6px #eee;
         transition: 0.5s;
         .icon_border {
           width: 46px;
