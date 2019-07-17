@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
 import HoverImage from 'react-hover-image'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 import './styles.scss'
 
@@ -18,6 +19,8 @@ import token from '../../images/token.png'
 
 import the_difference_footer_bg_mobile from '../../images/the_difference_footer_bg_mobile.png'
 import the_difference_footer_bg from '../../images/the_difference_footer_bg.png'
+
+import peer_to_peer_text from '../../images/peer_to_peer_text.svg'
 
 const TheDifferencePage: React.StatelessComponent<{}> = () => {
   return (
@@ -73,7 +76,16 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
             </div>
           </div>
         </div>
-        <img src={peer_to_peer} className="phone" />
+        <div className="image_area">
+          <ScrollAnimation
+            animateIn="swing"
+            delay={0}
+            className="swing_animation"
+          >
+            <img src={peer_to_peer_text} className="peer_text" />
+          </ScrollAnimation>
+          <img src={peer_to_peer} className="phone" />
+        </div>
         <div className="small_text">
           <div className="up_half">
             Sylo Messaging is a decentralized service that

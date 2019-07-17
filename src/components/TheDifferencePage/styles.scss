@@ -51,9 +51,19 @@
         display: none;
       }
     }
-    .phone {
+    .image_area {
       order: 2;
       width: 100%;
+      .phone {
+        width: 100%;
+      }
+      .swing_animation {
+        display: flex;
+        justify-content: center;
+        .peer_text {
+          transform: scale(0.8);
+        }
+      }
     }
     .small_text {
       width: 100%;
@@ -200,9 +210,17 @@
           display: block;
         }
       }
-      .phone {
+      .image_area {
         order: 1;
         width: 50%;
+        .phone {
+          width: 100%;
+        }
+        .swing_animation {
+          .peer_text {
+            transform: scale(1);
+          }
+        }
       }
       & > .small_text {
         display: none;

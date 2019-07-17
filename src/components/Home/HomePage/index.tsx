@@ -3,6 +3,8 @@ import StayArea from '../StayArea'
 import CommunicationArea from '../CommunicationArea'
 import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
 import ReactPlayer from 'react-player'
+import ScrollAnimation from 'react-animate-on-scroll'
+
 import './styles.scss'
 
 import home_watching_mobile from '../../../images/home_watching_mobile.png'
@@ -19,6 +21,9 @@ import Dorian_thumb from '../../../images/Dorian_thumb.png'
 
 import foot_home_mobile from '../../../images/foot_home_mobile.png'
 import foot_home_landscape from '../../../images/foot_home_landscape.png'
+
+import message_in from '../../../images/message_in.png'
+import message_coming from '../../../images/message_coming.png'
 
 const HomePage: React.StatelessComponent<{}> = () => {
   return (
@@ -39,14 +44,33 @@ const HomePage: React.StatelessComponent<{}> = () => {
             <br /> confidential.
           </div>
         </div>
-        <ResponsiveImage className="watching_img">
-          <ResponsiveImageSize
-            default
-            minWidth={0}
-            path={home_watching_mobile}
-          />
-          <ResponsiveImageSize minWidth={576} path={home_watching_landscape} />
-        </ResponsiveImage>
+        <div className="watching_img">
+          <ResponsiveImage className="">
+            <ResponsiveImageSize
+              default
+              minWidth={0}
+              path={home_watching_mobile}
+            />
+            <ResponsiveImageSize
+              minWidth={576}
+              path={home_watching_landscape}
+            />
+          </ResponsiveImage>
+          <ScrollAnimation
+            animateIn="scale-up-center"
+            delay={0}
+            className="message_in"
+          >
+            <img src={message_in} className="" />
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="scale-up-center"
+            delay={0}
+            className="message_coming"
+          >
+            <img src={message_coming} className="" />
+          </ScrollAnimation>
+        </div>
       </div>
       <div className="identity_area">
         <div className="text">
