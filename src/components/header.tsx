@@ -14,7 +14,7 @@ export const Header: React.StatelessComponent<{}> = () => {
     <div className="container-fluid">
       <div className="Header row justify-content-center border-bottom fixed-top">
         <Navbar className="col-10 col-sm-8" expand="sm">
-          <Navbar.Brand href="#/home">
+          <Navbar.Brand href="#/">
             {' '}
             <img
               src={logo}
