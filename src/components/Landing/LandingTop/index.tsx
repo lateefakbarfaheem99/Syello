@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
+import { Parallax } from 'react-scroll-parallax'
 import { CSSTransitionGroup } from 'react-transition-group'
 import { Animated } from 'react-animated-css'
 
@@ -72,7 +73,9 @@ const LandingTop: React.StatelessComponent<{}> = () => {
           isVisible={true}
           className="top_mountain"
         >
-          <img src={top_mountain_effect_landing} />
+          <Parallax className="" y={[0, -20]}>
+            <img src={top_mountain_effect_landing} />
+          </Parallax>
         </Animated>
         <Animated
           animationIn="bounceInUpOneTimeMiddleMountain"
@@ -84,7 +87,9 @@ const LandingTop: React.StatelessComponent<{}> = () => {
         >
           <img src={middle_mountain_effect_landing} className="" />
         </Animated>
-        <img src={bottom_mountain_effect_landing} className="bottom_mountain" />
+        <Parallax className="bottom_mountain" y={[0, -25]}>
+          <img src={bottom_mountain_effect_landing} className="" />
+        </Parallax>
         <Animated
           animationIn="bounceInUpOneTime"
           animationOut="fadeOut"

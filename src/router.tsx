@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Route, HashRouter, Switch } from 'react-router-dom'
-import { App } from './app'
+import { ParallaxProvider } from 'react-scroll-parallax'
+
 import { Header, About, Footer, Contact } from './components'
 import TheDifferencePage from './components/TheDifferencePage'
 import HomePage from './components/Home/HomePage'
@@ -20,32 +21,34 @@ const routes = [
 
 export const AppRouter: React.StatelessComponent<{}> = () => {
   return (
-    <HashRouter>
-      <div className="">
-        <Switch>
-          {routes.map(route => (
-            <Route
-              key={route.path}
-              path={route.path}
-              exact={route.exact}
-              component={route.is_head_neccessary ? () => <Header /> : null}
-            />
-          ))}
-          <Route component={Header} />
-        </Switch>
-        <Switch>
-          {routes.map(route => (
-            <Route
-              key={route.path}
-              path={route.path}
-              exact={route.exact}
-              component={route.main}
-            />
-          ))}
-          <Route component={HomePage} />
-        </Switch>
-        <Footer />
-      </div>
-    </HashRouter>
+    <ParallaxProvider>
+      <HashRouter>
+        <div className="">
+          <Switch>
+            {routes.map(route => (
+              <Route
+                key={route.path}
+                path={route.path}
+                exact={route.exact}
+                component={route.is_head_neccessary ? () => <Header /> : null}
+              />
+            ))}
+            <Route component={Header} />
+          </Switch>
+          <Switch>
+            {routes.map(route => (
+              <Route
+                key={route.path}
+                path={route.path}
+                exact={route.exact}
+                component={route.main}
+              />
+            ))}
+            <Route component={HomePage} />
+          </Switch>
+          <Footer />
+        </div>
+      </HashRouter>
+    </ParallaxProvider>
   )
 }

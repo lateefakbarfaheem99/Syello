@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { NavLink } from 'react-router-dom'
-
 import LandingHeader from '../LandingHeader'
 import LandingTop from '../LandingTop'
 import LandingMiddle from '../LandingMiddle'

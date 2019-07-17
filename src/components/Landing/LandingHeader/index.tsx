@@ -18,7 +18,7 @@ import './styles.scss'
 const LandingHeader: React.StatelessComponent<{}> = () => {
   return (
     <div className="container-fluid">
-      <div className="LandingHeader row justify-content-center border-bottom fixed-top">
+      <div className="LandingHeader row justify-content-center fixed-top">
         <Navbar className="col-10 col-sm-8" expand="sm">
           <Navbar.Brand href="#/home">
             {' '}

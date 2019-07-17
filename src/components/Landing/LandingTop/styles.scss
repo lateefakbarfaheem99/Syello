@@ -69,6 +69,9 @@
       left: 0;
       bottom: 0;
       width: 100%;
+      img {
+        width: 100%;
+      }
     }
     .phone_back {
       width: (100% * 360/1440);
@@ -513,4 +516,35 @@
     opacity: 0.1;
     -ms-transform: translate(-1px, -1px);
   }
+}
+
+@-webkit-keyframes slideInUpBottomMountain {
+  from {
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUpBottomMountain {
+  from {
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUpBottomMountain {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
 }
