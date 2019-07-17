@@ -42,9 +42,6 @@
       img {
         display: block;
         margin: 0 auto;
-        &:hover {
-          filter: hue-rotate(40deg);
-        }
       }
     }
   }

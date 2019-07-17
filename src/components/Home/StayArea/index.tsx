@@ -1,9 +1,14 @@
 import * as React from 'react'
 import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
+import HoverImage from 'react-hover-image'
 
 import './styles.scss'
-import home_get_the_app from '../../../images/home_get_the_app.png'
-import watch_the_video_btn from '../../../images/watch_the_video_btn.png'
+import get_the_app_home_normal from '../../../images/get_the_app_home_normal.png'
+import get_the_app_home_hover from '../../../images/get_the_app_home_hover.png'
+
+import watch_the_video_btn_normal from '../../../images/watch_the_video_btn_normal.png'
+import watch_the_video_btn_hover from '../../../images/watch_the_video_btn_hover.png'
+
 import home_top_stay_bg_mobile from '../../../images/home_top_stay_bg_mobile.png'
 import home_top_stay_bg_landscape from '../../../images/home_top_stay_bg_landscape.png'
 
@@ -32,8 +37,14 @@ const StayArea: React.StatelessComponent<{}> = () => {
           the status quo – we’re turning it on its head.
         </div>
         <div className="button_area">
-          <img src={home_get_the_app} />
-          <img src={watch_the_video_btn} />
+          <HoverImage
+            src={get_the_app_home_normal}
+            hoverSrc={get_the_app_home_hover}
+          />
+          <HoverImage
+            src={watch_the_video_btn_normal}
+            hoverSrc={watch_the_video_btn_hover}
+          />
         </div>
       </div>
       <div className="landscape_case">
@@ -49,8 +60,14 @@ const StayArea: React.StatelessComponent<{}> = () => {
             the status quo – we’re turning it on its head.
           </div>
           <div className="button_area">
-            <img src={home_get_the_app} />
-            <img src={watch_the_video_btn} />
+            <HoverImage
+              src={get_the_app_home_normal}
+              hoverSrc={get_the_app_home_hover}
+            />
+            <HoverImage
+              src={watch_the_video_btn_normal}
+              hoverSrc={watch_the_video_btn_hover}
+            />
           </div>
         </div>
       </div>

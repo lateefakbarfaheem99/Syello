@@ -217,14 +217,14 @@
         text-align: left;
         margin-bottom: 47px;
         .header {
-          margin: 0 10% 0 30%;
+          margin: 0 20% 0 20%;
 
           font-size: 40px;
           line-height: 47px;
           margin-bottom: 17px;
         }
         .content {
-          margin: 0 10% 0 30%;
+          margin: 0 20% 0 20%;
           font-size: 15px;
           font-weight: 500;
           line-height: 28px;
@@ -233,9 +233,8 @@
       .storage_img {
         width: 50%;
         img {
-          width: 70%;
-          margin: 0 10%;
-          box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+          width: 100%;
+          // margin-left: 20%;
         }
       }
     }

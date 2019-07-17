@@ -28,12 +28,15 @@ const HomePage: React.StatelessComponent<{}> = () => {
       <div className="watching_area">
         <div className="text">
           <div className="heading">
-            Type like <span className="color_red">no</span> one’s watching...
+            Type like <span className="color_red">no </span>
+            one’s
+            <br /> watching...
           </div>
           <div className="content">
-            Because no one is. Communicate with the freedom you have when you
-            are talking face to face, safe in the knowledge that your
-            communications will remain confidential.
+            Because no one is. Communicate with the freedom
+            <br /> you have when you are talking face to face, safe in
+            <br /> the knowledge that your communications will remain
+            <br /> confidential.
           </div>
         </div>
         <ResponsiveImage className="watching_img">

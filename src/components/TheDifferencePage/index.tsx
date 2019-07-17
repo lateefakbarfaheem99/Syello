@@ -1,11 +1,13 @@
 import * as React from 'react'
 import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
+import HoverImage from 'react-hover-image'
 
 import './styles.scss'
 
+import get_the_app_btn_normal from '../../images/get_the_app_btn_normal.png'
+import get_the_app_btn_hover from '../../images/get_the_app_btn_hover.png'
 import difference_top_bg from '../../images/difference_top_bg.png'
 import peer_to_peer from '../../images/peer_to_peer.png'
-import get_app_btn from '../../images/get_app_btn.png'
 import bullet from '../../images/bullet.png'
 
 import storage_mobile from '../../images/storage_mobile.png'
@@ -139,7 +141,10 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
                 Storing data in Sylo Storage
               </div>
             </div>
-            <img src={get_app_btn} />
+            <HoverImage
+              src={get_the_app_btn_normal}
+              hoverSrc={get_the_app_btn_hover}
+            />
           </div>
         </div>
         <ResponsiveImage className="token_img">
