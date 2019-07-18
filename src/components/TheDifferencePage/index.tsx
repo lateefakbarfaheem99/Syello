@@ -159,34 +159,97 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
         </div>
       </div>
       <div className="token">
+
         <div className="text">
+      <ScrollAnimation
+            animateIn="slideDown"
+            duration={0.5}
+            className=""
+          >
           <div className="header">
             The Sylo <span className="color_red">Token</span>{' '}
           </div>
           <div className="content">
-            A Sylo token (SYLO) is a digital asset that you can purchase and use
-            to fuel the Sylo App. You can think of them like credits you can
+            A Sylo token (SYLO) is a digital asset that you can<br/> purchase and use
+            to fuel the Sylo App. You can think of<br/> them like credits you can
             spend in-app on things like:
           </div>
+
+        </ScrollAnimation>
           <div className="features">
             <div className="feature_list">
               <div className="feature_item">
                 <img src={bullet} />
-                Paying for features{' '}
+                <ScrollAnimation
+                  animateIn="fadeIn"
+                  duration={0.5}
+                  className=""
+                >
+                  <span className="text">
+                    Paying for features
+                  </span>
+                </ScrollAnimation>
               </div>
               <div className="feature_item">
-                <img src={bullet} />
-                Sending value to contacts{' '}
+              <ScrollAnimation
+                  animateIn="scale-up-center"
+                  delay={100}
+                  duration={0.3}
+                  className=""
+                >
+              <img src={bullet} />
+              </ScrollAnimation>
+
+              <ScrollAnimation
+                animateIn="fadeIn"
+                duration={0.5}
+                className=""
+              >
+                <span className="text">
+                  Sending value to contacts{' '}
+                </span></ScrollAnimation>
               </div>
               <div className="feature_item">
+              <ScrollAnimation
+                  animateIn="scale-up-center"
+                  delay={200}
+                  duration={0.3}
+                  className=""
+                >
+              <ScrollAnimation
+                  animateIn="scale-up-center"
+                  delay={300}
+                  duration={0.3}
+                  className=""
+                >
+
                 <img src={bullet} />
-                Storing data in Sylo Storage
+                </ScrollAnimation>
+                </ScrollAnimation>
+                <ScrollAnimation
+                  animateIn="fadeIn"
+                  duration={0.5}
+                  className=""
+                >
+
+                <span className="text">
+                  Storing data in Sylo Storage
+
+                </span>
+                </ScrollAnimation>
               </div>
             </div>
+            <ScrollAnimation
+                  animateIn="scale-up-center"
+                  delay={400}
+                  duration={0.3}
+                  className="get_the_button_app_animation"
+                >
             <HoverImage
               src={get_the_app_btn_normal}
               hoverSrc={get_the_app_btn_hover}
             />
+            </ScrollAnimation>
           </div>
         </div>
         <ResponsiveImage className="token_img">
