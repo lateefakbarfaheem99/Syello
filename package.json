@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --mode development --inline --hot --open",
     "build": "webpack"
   },
-  "author": "Tylor",
+  "author": "Tyler",
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",

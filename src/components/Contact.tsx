@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
+import { Animated } from 'react-animated-css'
 
 import '../styles/global.scss'
 import '../styles/contact.scss'
@@ -20,47 +21,93 @@ export const Contact: React.StatelessComponent<{}> = () => {
   return (
     <div className="contact">
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="hear col col-lg-8 pt-5 mt-lg-5">
-            We'd love to hear
-            <br className="rwd-break" /> from
-            {console.log(bg_mountain_front_mobile)}{' '}
-            <span className="you">you</span>
+        <Animated
+          animationIn="fadeIn_SliderUp"
+          animationOut="fadeOut"
+          animationInDelay={200}
+          animationInDuration={1000}
+          isVisible={true}
+        >
+          <div className="row justify-content-center">
+            <div className="hear col col-lg-8 pt-5 mt-lg-5">
+              We'd love to hear
+              <br className="rwd-break" /> from
+              {console.log(bg_mountain_front_mobile)}{' '}
+              <span className="you">you</span>
+            </div>
           </div>
-        </div>
-        <div className="row justify-content-center">
-          <div className="touch col-8 pt-3 mt-3 mt-lg-3">
-            Got something to say? We
-            <br className="rwd-break" /> want to hear it all so get in
-            <br className="rwd-break" /> touch.
+          <div className="row justify-content-center">
+            <div className="touch col-8 pt-3 mt-3 mt-lg-3">
+              Got something to say? We
+              <br className="rwd-break" /> want to hear it all so get in
+              <br className="rwd-break" /> touch.
+            </div>
           </div>
-        </div>
+        </Animated>
         <div className="social-area row justify-content-center mt-5">
           <div className="col">
             <div className="social-icons">
-              <div className="social-icon-border">
-                <a href="mailto:contact@sylo.io" target="_blank">
-                  <FontAwesomeIcon icon={faEnvelope} className="social-icon" />
-                </a>
-              </div>
-              <div className="social-icon-border">
-                <a href="https://twitter.com/sylo" target="_blank">
-                  <FontAwesomeIcon icon={faTwitter} className="social-icon" />
-                </a>
-              </div>
-              <div className="social-icon-border">
-                <a href="https://www.facebook.com/sylo.io" target="_blank">
-                  <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
-                </a>
-              </div>
-              <div className="social-icon-border">
-                <a href="https://t.me/sylo_io" target="_blank">
-                  <FontAwesomeIcon
-                    icon={faTelegramPlane}
-                    className="social-icon"
-                  />
-                </a>
-              </div>
+              <Animated
+                animationIn="scale-up-center"
+                animationOut="fadeOut"
+                animationInDelay={500}
+                animationInDuration={300}
+                isVisible={true}
+              >
+                <div className="social-icon-border">
+                  <a href="mailto:contact@sylo.io" target="_blank">
+                    <FontAwesomeIcon
+                      icon={faEnvelope}
+                      className="social-icon"
+                    />
+                  </a>
+                </div>
+              </Animated>
+              <Animated
+                animationIn="scale-up-center"
+                animationOut="fadeOut"
+                animationInDelay={600}
+                animationInDuration={300}
+                isVisible={true}
+              >
+                <div className="social-icon-border">
+                  <a href="https://twitter.com/sylo" target="_blank">
+                    <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+                  </a>
+                </div>
+              </Animated>
+              <Animated
+                animationIn="scale-up-center"
+                animationOut="fadeOut"
+                animationInDelay={700}
+                animationInDuration={300}
+                isVisible={true}
+              >
+                <div className="social-icon-border">
+                  <a href="https://www.facebook.com/sylo.io" target="_blank">
+                    <FontAwesomeIcon
+                      icon={faFacebookF}
+                      className="social-icon"
+                    />
+                  </a>
+                </div>
+              </Animated>
+              <Animated
+                animationIn="scale-up-center"
+                animationOut="fadeOut"
+                animationInDelay={800}
+                animationInDuration={300}
+                isVisible={true}
+              >
+                <div className="social-icon-border">
+                  <a href="https://t.me/sylo_io" target="_blank">
+                    <FontAwesomeIcon
+                      icon={faTelegramPlane}
+                      className="social-icon"
+                    />
+                  </a>
+                </div>
+              </Animated>
             </div>
           </div>
         </div>

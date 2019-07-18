@@ -131,124 +131,94 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
         </ScrollAnimation>
         <div className="storage_img">
           <div className="image_capsule">
-          <ResponsiveImage className="">
-          <ResponsiveImageSize default minWidth={0} path={storage_mobile} />
-          <ResponsiveImageSize minWidth={720} path={storage_landscape} />
-        </ResponsiveImage>
-        <ScrollAnimation
-            animateIn="scale-up-center"
-            delay={0}
-            duration={1}
-            className="storage_red_box"
-          >
-
-        <img src={storage_red_box}/>
-        </ScrollAnimation>
-        <ScrollAnimation
-            animateIn="chain-animation"
-            delay={1000}
-            duration={1}
-            className="storage_red_box_chain"
-          >
-
-         <img src={storage_red_box_chain} className=""/>
-        </ScrollAnimation>
-
+            <ResponsiveImage className="">
+              <ResponsiveImageSize default minWidth={0} path={storage_mobile} />
+              <ResponsiveImageSize minWidth={720} path={storage_landscape} />
+            </ResponsiveImage>
+            <ScrollAnimation
+              animateIn="scale-up-center"
+              delay={0}
+              duration={1}
+              className="storage_red_box"
+            >
+              <img src={storage_red_box} />
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateIn="chain-animation"
+              delay={1000}
+              duration={1}
+              className="storage_red_box_chain"
+            >
+              <img src={storage_red_box_chain} className="" />
+            </ScrollAnimation>
           </div>
-
         </div>
       </div>
       <div className="token">
-
         <div className="text">
-      <ScrollAnimation
-            animateIn="slideDown"
-            duration={0.5}
-            className=""
-          >
-          <div className="header">
-            The Sylo <span className="color_red">Token</span>{' '}
-          </div>
-          <div className="content">
-            A Sylo token (SYLO) is a digital asset that you can<br/> purchase and use
-            to fuel the Sylo App. You can think of<br/> them like credits you can
-            spend in-app on things like:
-          </div>
-
-        </ScrollAnimation>
+          <ScrollAnimation animateIn="slideDown" duration={0.5} className="">
+            <div className="header">
+              The Sylo <span className="color_red">Token</span>{' '}
+            </div>
+            <div className="content">
+              A Sylo token (SYLO) is a digital asset that you can
+              <br /> purchase and use to fuel the Sylo App. You can think of
+              <br /> them like credits you can spend in-app on things like:
+            </div>
+          </ScrollAnimation>
           <div className="features">
             <div className="feature_list">
               <div className="feature_item">
                 <img src={bullet} />
-                <ScrollAnimation
-                  animateIn="fadeIn"
-                  duration={0.5}
-                  className=""
-                >
-                  <span className="text">
-                    Paying for features
-                  </span>
+                <ScrollAnimation animateIn="fadeIn" duration={0.5} className="">
+                  <span className="text">Paying for features</span>
                 </ScrollAnimation>
               </div>
               <div className="feature_item">
-              <ScrollAnimation
+                <ScrollAnimation
                   animateIn="scale-up-center"
                   delay={100}
                   duration={0.3}
                   className=""
                 >
-              <img src={bullet} />
-              </ScrollAnimation>
+                  <img src={bullet} />
+                </ScrollAnimation>
 
-              <ScrollAnimation
-                animateIn="fadeIn"
-                duration={0.5}
-                className=""
-              >
-                <span className="text">
-                  Sending value to contacts{' '}
-                </span></ScrollAnimation>
+                <ScrollAnimation animateIn="fadeIn" duration={0.5} className="">
+                  <span className="text">Sending value to contacts </span>
+                </ScrollAnimation>
               </div>
               <div className="feature_item">
-              <ScrollAnimation
+                <ScrollAnimation
                   animateIn="scale-up-center"
                   delay={200}
                   duration={0.3}
                   className=""
                 >
-              <ScrollAnimation
-                  animateIn="scale-up-center"
-                  delay={300}
-                  duration={0.3}
-                  className=""
-                >
-
-                <img src={bullet} />
+                  <ScrollAnimation
+                    animateIn="scale-up-center"
+                    delay={300}
+                    duration={0.3}
+                    className=""
+                  >
+                    <img src={bullet} />
+                  </ScrollAnimation>
                 </ScrollAnimation>
-                </ScrollAnimation>
-                <ScrollAnimation
-                  animateIn="fadeIn"
-                  duration={0.5}
-                  className=""
-                >
-
-                <span className="text">
-                  Storing data in Sylo Storage
-
-                </span>
+                <ScrollAnimation animateIn="fadeIn" duration={0.5} className="">
+                  <span className="text">Storing data in Sylo Storage</span>
                 </ScrollAnimation>
               </div>
             </div>
             <ScrollAnimation
-                  animateIn="scale-up-center"
-                  delay={400}
-                  duration={0.3}
-                  className="get_the_button_app_animation"
-                >
-            <HoverImage
-              src={get_the_app_btn_normal}
-              hoverSrc={get_the_app_btn_hover}
-            />
+              animateIn="scale-up-center"
+              delay={400}
+              duration={0.3}
+              className="get_the_button_app_animation"
+            >
+              <HoverImage
+                src={get_the_app_btn_normal}
+                hoverSrc={get_the_app_btn_hover}
+              />
             </ScrollAnimation>
           </div>
         </div>
