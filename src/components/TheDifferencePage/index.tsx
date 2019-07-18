@@ -11,8 +11,10 @@ import difference_top_bg from '../../images/difference_top_bg.png'
 import peer_to_peer from '../../images/peer_to_peer.png'
 import bullet from '../../images/bullet.png'
 
-import storage_mobile from '../../images/storage_mobile.png'
-import storage from '../../images/storage.png'
+import storage_mobile from '../../images/storage_mobile.svg'
+import storage_landscape from '../../images/storage_landscape.svg'
+import storage_red_box from '../../images/storage_red_box.svg'
+import storage_red_box_chain from '../../images/storage_red_box_chain.png'
 
 import token_mobile from '../../images/token_mobile.png'
 import token from '../../images/token.png'
@@ -106,7 +108,11 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
         </div>
       </div>
       <div className="storage">
-        <div className="text">
+        <ScrollAnimation
+          animateIn="fadeIn_SlideDown"
+          delay={0}
+          className="text"
+        >
           <div className="header">
             <span className="color_red">Decentralized</span>
             <br className="line_break_mobile" /> Storage{' '}
@@ -122,11 +128,35 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
             providers, allowing anyone to contribute to the network in exchange
             for Sylo tokens.
           </div>
-        </div>
-        <ResponsiveImage className="storage_img">
+        </ScrollAnimation>
+        <div className="storage_img">
+          <div className="image_capsule">
+          <ResponsiveImage className="">
           <ResponsiveImageSize default minWidth={0} path={storage_mobile} />
-          <ResponsiveImageSize minWidth={576} path={storage} />
+          <ResponsiveImageSize minWidth={720} path={storage_landscape} />
         </ResponsiveImage>
+        <ScrollAnimation
+            animateIn="scale-up-center"
+            delay={0}
+            duration={1}
+            className="storage_red_box"
+          >
+
+        <img src={storage_red_box}/>
+        </ScrollAnimation>
+        <ScrollAnimation
+            animateIn="chain-animation"
+            delay={1000}
+            duration={1}
+            className="storage_red_box_chain"
+          >
+
+         <img src={storage_red_box_chain} className=""/>
+        </ScrollAnimation>
+
+          </div>
+
+        </div>
       </div>
       <div className="token">
         <div className="text">
@@ -161,7 +191,7 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
         </div>
         <ResponsiveImage className="token_img">
           <ResponsiveImageSize default minWidth={0} path={token_mobile} />
-          <ResponsiveImageSize minWidth={576} path={token} />
+          <ResponsiveImageSize minWidth={720} path={token} />
         </ResponsiveImage>
       </div>
       <ResponsiveImage className="footer_adaptive_bg">
@@ -170,7 +200,7 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
           minWidth={0}
           path={the_difference_footer_bg_mobile}
         />
-        <ResponsiveImageSize minWidth={576} path={the_difference_footer_bg} />
+        <ResponsiveImageSize minWidth={720} path={the_difference_footer_bg} />
       </ResponsiveImage>
     </div>
   )
