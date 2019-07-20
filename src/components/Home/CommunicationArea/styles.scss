@@ -2,6 +2,20 @@
 
 .CommunicationArea {
   margin-bottom: 98px;
+  position: relative;
+  .carousel {
+    display: none;
+    .stable {
+    }
+    // .constantly_rotating {
+    //   width: 50%;
+    //   animation: rotation_clockwise 4s linear infinite;
+    //   // display: none;
+    // }
+    .svg_content {
+      // width: 100%;
+    }
+  }
   .landscape_head_text {
     display: none;
   }
@@ -90,9 +104,11 @@
 
 @include media-breakpoint-up(lg) {
   .CommunicationArea {
-    position: relative;
+    // position: relative;
     margin-bottom: 166px;
-
+    .carousel {
+      display: unset;
+    }
     .communication_bg {
       img {
         display: block;
@@ -166,5 +182,21 @@
         }
       }
     }
+  }
+}
+
+@-moz-keyframes rotation_clockwise {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotation_clockwise {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotation_clockwise {
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
