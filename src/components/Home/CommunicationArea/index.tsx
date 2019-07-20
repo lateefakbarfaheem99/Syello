@@ -12,6 +12,11 @@ import communications from '../../../images/communication/Communications.png';
 import connectedApplication from '../../../images/communication/Connected Application.png';
 import digitalWallet from '../../../images/communication/Digital wallet.png';
 
+import address_book_phone from '../../../images/communication/addressbook_phone.png';
+import communication_phone from '../../../images/communication/communication_phone.png';
+import connected_application_phone from '../../../images/communication/connected_application.png';
+import digital_wallet_phone from '../../../images/communication/digital_wallet_phone.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBroadcastTower,
@@ -27,6 +32,7 @@ enum RotatingStatus {
 }
 
 interface State {
+  imageWidth: number;
   degree: number;
   imageProps: any;
 }
@@ -44,8 +50,11 @@ const size = radius * 2;
 
 class CommunicationArea extends React.Component<any, State> {
   private timerID: any;
-  private width: number;
-  private height: number;
+  private canvasWidth: number;
+  private canvasHeight: number;
+  private out_w: number;
+  private in_w: number;
+  private readonly originalImageWidth = 120;
   private step: number;
   private opacity: number;
   private rotatingStatus: RotatingStatus;
@@ -54,18 +63,68 @@ class CommunicationArea extends React.Component<any, State> {
   private opacityStep: number;
   private curTargetIndex: number;
   private readonly originalOpacity = 0.5;
+  private readonly maxScale = 1.5;
+  private scale: number;
+  private phoneImages;
+  private phoneImageOpacity = 1;
 
   public constructor(props: Props) {
     super(props);
     this.state = {
+      imageWidth: 0,
       degree: 0,
-      imageProps: []
+      imageProps: [
+        {
+          imageWidth: this.originalImageWidth,
+          degree: 0,
+          imageProps: [
+            {
+              href: digitalWallet,
+              x: 0,
+              y: 0,
+              opacity: 0.5,
+              scale: 1
+            },
+            {
+              href: addressBook,
+              x: 0,
+              y: 0,
+              opacity: 0.5,
+              scale: 1
+            },
+            {
+              href: connectedApplication,
+              x: 0,
+              y: 0,
+              opacity: 0.5,
+              scale: 1
+            },
+            {
+              href: communications,
+              x: 0,
+              y: 0,
+              opacity: 0.5,
+              scale: 1
+            }
+          ]
+        }
+      ]
     };
-    this.width = 1000;
-    this.height = 1000;
+
+    this.phoneImages = [
+      digital_wallet_phone,
+      address_book_phone,
+      connected_application_phone,
+      communication_phone
+    ];
+
+    this.canvasWidth = 1000;
+    this.canvasHeight = 1000;
+    this.out_w = 700;
     this.step = -0.8;
     this.opacity = 0.5;
     this.opacityStep = 0.1;
+    this.curTargetIndex = 0;
     this.rotatingStatus = RotatingStatus.Aimless;
   }
 
@@ -81,13 +140,19 @@ class CommunicationArea extends React.Component<any, State> {
         this.opacity = 1;
       }
       this.opacity += this.opacityStep;
+      if (this.opacity > 1) this.opacity = 1;
+
+      this.scale = 1.3;
       let { imageProps } = this.state;
       imageProps[this.curTargetIndex].opacity = this.opacity;
+      imageProps[this.curTargetIndex].scale = this.scale;
       this.setState({ imageProps: imageProps });
+      console.log(this.phoneImageOpacity);
     }
     if (degree > 360) degree = 0;
     if (degree < 0) degree = 360;
     this.setState({ degree: degree });
+    this.phoneImageOpacity = this.opacity + 0.2;
   }
 
   private onHover(index: number) {
@@ -100,66 +165,104 @@ class CommunicationArea extends React.Component<any, State> {
       Math.abs(this.targetDeg - this.state.degree) / targetingStep
     );
     this.opacityStep = (1 - this.originalOpacity) / remainingTickCountToTarget;
+    // this.phoneImageOpacity = 0.5;
   }
 
   private onLeave() {
     this.rotatingStatus = RotatingStatus.Aimless;
     this.step = -1;
     this.opacity = 0.5;
+    this.scale = 1;
     let { imageProps } = this.state;
+
     imageProps[this.curTargetIndex].opacity = this.opacity;
+    imageProps[this.curTargetIndex].scale = this.scale;
     this.setState({ imageProps: imageProps });
+    // this.phoneImageOpacity = 1;
   }
 
   componentDidMount() {
-    let w: number = this.width;
-    w = 500;
-    let sw: number = 100;
+    this.in_w = this.out_w - 100;
+    let offset = (this.out_w - this.in_w) / 2;
+    let sw = this.originalImageWidth;
     this.setState({
+      imageWidth: this.originalImageWidth,
       degree: 0,
       imageProps: [
-        { href: digitalWallet, x: w / 2 - sw / 2, y: 0, opacity: 0.5 },
-        { href: addressBook, x: 0, y: w / 2 - sw / 2, opacity: 0.5 },
+        {
+          href: digitalWallet,
+          x: offset + this.in_w / 2 - sw / 2,
+          y: offset + 0,
+          opacity: 0.5,
+          scale: 1
+        },
+        {
+          href: addressBook,
+          x: offset + 0,
+          y: offset + this.in_w / 2 - sw / 2,
+          opacity: 0.5,
+          scale: 1
+        },
         {
           href: connectedApplication,
-          x: w / 2 - sw / 2,
-          y: w - sw,
-          opacity: 0.5
+          x: offset + this.in_w / 2 - sw / 2,
+          y: offset + this.in_w - sw,
+          opacity: 0.5,
+          scale: 1
         },
-        { href: communications, x: w - sw, y: w / 2 - sw / 2, opacity: 0.5 }
+        {
+          href: communications,
+          x: offset + this.in_w - sw,
+          y: offset + this.in_w / 2 - sw / 2,
+          opacity: 0.5,
+          scale: 1
+        }
       ]
     });
     this.timerID = setInterval(() => this.tick(), 30);
   }
+
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
 
   public render() {
     const { imageProps } = this.state;
-    const w: number = this.width / 2;
-    const sw: number = 100;
+    const innerCircleOffset =
+      this.originalImageWidth / 2 + (this.out_w - this.in_w) / 2;
     return (
       <div className="CommunicationArea">
         <div className="carousel">
-          <svg width={this.width} height={this.height} className="svg_content">
-            <svg x="250" y="0" width={w} height={w}>
-              <image width={w} height={w} href={background_circle}>
+          <svg viewBox="0 0 1500 700" className="svg_content">
+            <svg x="400" y="0" width={`${this.out_w}`} height={`${this.out_w}`}>
+              <image
+                width={`${this.in_w - this.originalImageWidth}`}
+                height={`${this.in_w - this.originalImageWidth}`}
+                x={innerCircleOffset}
+                y={innerCircleOffset}
+                href={stable}
+                className="stable"
+              />
+              <image
+                width={this.in_w - this.originalImageWidth}
+                height={this.in_w - this.originalImageWidth}
+                x={innerCircleOffset}
+                y={innerCircleOffset}
+                href={background_circle}
+              >
                 <animateTransform
                   attributeName="transform"
                   attributeType="XML"
                   type="rotate"
-                  from={`0 ${w / 2}  ${w / 2}`}
-                  to={`360 ${w / 2}  ${w / 2}`}
+                  from={`0 ${this.out_w / 2}  ${this.out_w / 2}`}
+                  to={`360 ${this.out_w / 2}  ${this.out_w / 2}`}
                   dur="10s"
                   repeatCount="indefinite"
                 />
               </image>
-              <image width={w} height={w} href={stable} className="stable" />
               <g
-                width={w}
-                height={w}
-                transform={`rotate( ${this.state.degree} ${w / 2} ${w / 2} )`}
+                transform={`rotate( ${this.state.degree} ${this.out_w /
+                  2} ${this.out_w / 2} )`}
               >
                 {imageProps.map((prop, index) => {
                   return (
@@ -169,12 +272,28 @@ class CommunicationArea extends React.Component<any, State> {
                       x={prop.x}
                       y={prop.y}
                       opacity={prop.opacity}
-                      width={sw}
-                      height={sw}
+                      width={this.state.imageWidth}
+                      height={this.state.imageWidth}
+                      transform={`matrix(${prop.scale}, 0, 0, ${
+                        prop.scale
+                      }, ${prop.x - prop.scale * prop.x}, ${prop.y -
+                        prop.scale * prop.y} )`}
                     />
                   );
                 })}
               </g>
+              <image
+                // width={this.in_w - this.originalImageWidth}
+                // height={this.in_w - this.originalImageWidth}
+                // x={innerCircleOffset}
+                // y={innerCircleOffset}
+                href={this.phoneImages[this.curTargetIndex]}
+                opacity={this.phoneImageOpacity}
+                width="500"
+                x="75"
+                y="100"
+                className="phone_img"
+              />
             </svg>
           </svg>
         </div>
