@@ -4,7 +4,9 @@ import { Header, Footer, Contact } from './components';
 import TheDifferencePage from './components/TheDifferencePage';
 import HomePage from './components/Home/HomePage';
 
+import { ParallaxProvider } from 'react-scroll-parallax';
 import Lottie from 'react-lottie';
+
 import animationData from './images/sylo-logo-animation.json';
 
 interface IState {
@@ -18,7 +20,7 @@ export class AppRouter extends React.Component<any, IState> {
   }
   // fake authentication Promise
   private authenticate() {
-    return new Promise(resolve => setTimeout(resolve, 1500));
+    return new Promise(resolve => setTimeout(resolve, 0));
   }
 
   componentDidMount() {
@@ -43,16 +45,18 @@ export class AppRouter extends React.Component<any, IState> {
         {this.state.isLoading ? (
           <Lottie options={defaultOptions} height={400} width={400} />
         ) : (
-          <div className="">
-            <Header />
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/difference" component={TheDifferencePage} />
-              <Route path="/contact" component={Contact} />
-              <Route component={HomePage} />
-            </Switch>
-            <Footer />
-          </div>
+          <ParallaxProvider>
+            <div className="">
+              <Header />
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/difference" component={TheDifferencePage} />
+                <Route path="/contact" component={Contact} />
+                <Route component={HomePage} />
+              </Switch>
+              <Footer />
+            </div>
+          </ParallaxProvider>
         )}
       </HashRouter>
     );
