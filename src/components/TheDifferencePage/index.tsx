@@ -1,28 +1,37 @@
-import * as React from 'react'
-import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
-import HoverImage from 'react-hover-image'
-import ScrollAnimation from 'react-animate-on-scroll'
+import * as React from 'react';
+import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image';
+import HoverImage from 'react-hover-image';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { Animated } from 'react-animated-css';
 
-import './styles.scss'
+import './styles.scss';
 
-import get_the_app_btn_normal from '../../images/get_the_app_btn_normal.png'
-import get_the_app_btn_hover from '../../images/get_the_app_btn_hover.png'
-import difference_top_bg from '../../images/difference_top_bg.png'
-import peer_to_peer from '../../images/peer_to_peer.png'
-import bullet from '../../images/bullet.png'
+import get_the_app_btn_normal from '../../images/get_the_app_btn_normal.png';
+import get_the_app_btn_hover from '../../images/get_the_app_btn_hover.png';
+import difference_top_bg from '../../images/difference_top_bg.png';
+import peer_to_peer from '../../images/peer_to_peer.png';
+import bullet from '../../images/bullet.png';
 
-import storage_mobile from '../../images/storage_mobile.svg'
-import storage_landscape from '../../images/storage_landscape.svg'
-import storage_red_box from '../../images/storage_red_box.svg'
-import storage_red_box_chain from '../../images/storage_red_box_chain.png'
+import storage_mobile from '../../images/storage_mobile.svg';
+import storage_landscape from '../../images/storage_landscape.svg';
+import storage_red_box from '../../images/storage_red_box.svg';
+import storage_red_box_chain from '../../images/storage_red_box_chain.png';
 
-import token_mobile from '../../images/token_mobile.png'
-import token from '../../images/token.png'
+import token_mobile from '../../images/token_mobile.png';
+import token from '../../images/token.png';
 
-import the_difference_footer_bg_mobile from '../../images/the_difference_footer_bg_mobile.png'
-import the_difference_footer_bg from '../../images/the_difference_footer_bg.png'
+import the_difference_footer_bg_mobile from '../../images/the_difference_footer_bg_mobile.png';
+import the_difference_footer_bg from '../../images/the_difference_footer_bg.png';
 
-import peer_to_peer_text from '../../images/peer_to_peer_text.svg'
+import peer_to_peer_text from '../../images/peer_to_peer_text.svg';
+
+// assets for animation
+import bottomTerrain from '../../images/differenceTop/bottomTerrain.png';
+import man from '../../images/differenceTop/manSitting.png';
+import middleTerrain from '../../images/differenceTop/middleTerrain.png';
+import topTerrain from '../../images/differenceTop/topTerrain.png';
+import treeLeft from '../../images/differenceTop/treeLeft.png';
+import treeRight from '../../images/differenceTop/treeRight.png';
 
 const TheDifferencePage: React.StatelessComponent<{}> = () => {
   return (
@@ -32,26 +41,89 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
           Not your average <span className="messenger">messenger</span>
         </div>
         <div className="content_area">
-          <img src={difference_top_bg} className="difference_top_bg" />
-          <div className="text">
-            <div className="top_half">
-              Sylo is a breath of fresh air in a world of intrusive
-              <br className="line_break_mobile" /> advertising, data gathering
-              and privacy
-              <br className="line_break_mobile" />
-              mis-management.
-            </div>
-            <div className="bottom_half">
-              Other social platforms create value by breaching
-              <br className="line_break_mobile" /> their users' privacy in order
-              to reward the few.
-              <br className="line_break_mobile" />
-              <br className="line_break_landscape" />
-              Our decentralised platform is privacy-first and
-              <br className="line_break_mobile" /> powered by many to give you
-              choice.
-            </div>
+          <div className="animationArea">
+            <Animated
+              animationIn="topTerrainAnimation"
+              animationOut="fadeOut"
+              animationInDelay={2000}
+              animationInDuration={1500}
+              isVisible={true}
+              className="topTerrain"
+            >
+              <img src={topTerrain} />
+            </Animated>
+
+            <Animated
+              animationIn="middleTerrainAnimation"
+              animationOut="fadeOut"
+              animationInDelay={2000}
+              animationInDuration={1000}
+              isVisible={true}
+              className="middleTerrain"
+            >
+              <img src={middleTerrain} />
+            </Animated>
+
+            <Animated
+              animationIn="treeRightAnimation"
+              animationOut="fadeOut"
+              animationInDelay={2000}
+              animationInDuration={1000}
+              isVisible={true}
+              className="treeLeft"
+            >
+              <img src={treeLeft} />
+            </Animated>
+            <Animated
+              animationIn="treeRightAnimation"
+              animationOut="fadeOut"
+              animationInDelay={2000}
+              animationInDuration={1000}
+              isVisible={true}
+              className="treeRight"
+            >
+              <img src={treeRight} />
+            </Animated>
+            <Animated
+              animationIn="manAnimation"
+              animationOut="fadeOut"
+              animationInDelay={3000}
+              animationInDuration={1500}
+              isVisible={true}
+              className="man"
+            >
+              <img src={man} />
+            </Animated>
+            <img src={bottomTerrain} className="bottomTerrain" />
           </div>
+          <Animated
+            animationIn="textFadeInSlideUp"
+            animationOut="fadeOut"
+            animationInDelay={1000}
+            animationInDuration={500}
+            isVisible={true}
+            className="text"
+          >
+            <div className="">
+              <div className="top_half">
+                Sylo is a breath of fresh air in a world of intrusive
+                <br className="line_break_mobile" /> advertising, data gathering
+                and privacy
+                <br className="line_break_mobile" />
+                mis-management.
+              </div>
+              <div className="bottom_half">
+                Other social platforms create value by breaching
+                <br className="line_break_mobile" /> their users' privacy in
+                order to reward the few.
+                <br className="line_break_mobile" />
+                <br className="line_break_landscape" />
+                Our decentralised platform is privacy-first and
+                <br className="line_break_mobile" /> powered by many to give you
+                choice.
+              </div>
+            </div>
+          </Animated>
         </div>
       </div>
       <div className="decentralized">
@@ -236,7 +308,7 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
         <ResponsiveImageSize minWidth={720} path={the_difference_footer_bg} />
       </ResponsiveImage>
     </div>
-  )
-}
+  );
+};
 
-export default TheDifferencePage
+export default TheDifferencePage;

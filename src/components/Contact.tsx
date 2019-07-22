@@ -1,21 +1,27 @@
-import * as React from 'react'
-import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
-import { Animated } from 'react-animated-css'
+import * as React from 'react';
+import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image';
+import { Animated } from 'react-animated-css';
 
-import '../styles/global.scss'
-import '../styles/contact.scss'
+import '../styles/global.scss';
+import '../styles/contact.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTwitter,
   faFacebookF,
   faTelegramPlane
-} from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import bg_mountain_front_mobile from '../images/bg_mountain_front_mobile.png'
-import contact_bg_mobile from '../images/contact_bg_mobile.png'
-import contact_bg_landscape from '../images/contact_bg_landscape.png'
+import bg_mountain_front_mobile from '../images/bg_mountain_front_mobile.png';
+import contact_bg_mobile from '../images/contact_bg_mobile.png';
+import bottomHillLandscape from '../images/contact/bottomHillLandscape.png';
+
+import buildings from '../images/contact/buildings.png';
+import hill from '../images/contact/hill.png';
+import watering_lady from '../images/contact/watering_lady.png';
+import leftTree from '../images/contact/leftTree.png';
+import rightTree from '../images/contact/rightTree.png';
 
 export const Contact: React.StatelessComponent<{}> = () => {
   return (
@@ -112,10 +118,64 @@ export const Contact: React.StatelessComponent<{}> = () => {
           </div>
         </div>
       </div>
-      <ResponsiveImage className="">
-        <ResponsiveImageSize default minWidth={0} path={contact_bg_mobile} />
-        <ResponsiveImageSize minWidth={576} path={contact_bg_landscape} />
-      </ResponsiveImage>
+
+      <div className="animationArea">
+        <Animated
+          animationIn="contactBuildingAnimation"
+          animationOut="fadeOut"
+          animationInDelay={2000}
+          animationInDuration={1000}
+          isVisible={true}
+          className="buildings"
+        >
+          <img src={buildings} />
+        </Animated>
+        <Animated
+          animationIn="hillAnimation"
+          animationOut="fadeOut"
+          animationInDelay={2000}
+          animationInDuration={1000}
+          isVisible={true}
+          className="hill"
+        >
+          <img src={hill} className="hill_img" />
+        </Animated>
+
+        <Animated
+          animationIn="leftTreeAnimation"
+          animationOut="fadeOut"
+          animationInDelay={2000}
+          animationInDuration={1000}
+          isVisible={true}
+          className="leftTree"
+        >
+          <img src={leftTree} />
+        </Animated>
+        <Animated
+          animationIn="fadeIn"
+          animationOut="fadeOut"
+          animationInDelay={2000}
+          animationInDuration={1000}
+          isVisible={true}
+          className="rightTree"
+        >
+          <img src={rightTree} />
+        </Animated>
+        <Animated
+          animationIn="wateringLadyAnimation"
+          animationOut="fadeOut"
+          animationInDelay={2000}
+          animationInDuration={1000}
+          isVisible={true}
+          className="lady"
+        >
+          <img src={watering_lady} className="lady_img" />
+        </Animated>
+        <ResponsiveImage className="bottomHill">
+          <ResponsiveImageSize default minWidth={0} path={contact_bg_mobile} />
+          <ResponsiveImageSize minWidth={576} path={bottomHillLandscape} />
+        </ResponsiveImage>
+      </div>
     </div>
-  )
-}
+  );
+};

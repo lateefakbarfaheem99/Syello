@@ -1,4 +1,4 @@
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 .contact {
   padding-top: 100px;
@@ -7,10 +7,13 @@
   img {
     width: 100%;
   }
+  .animationArea {
+    overflow: hidden;
+  }
 }
 
 .hear {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 
   font-size: 32px;
   @include media-breakpoint-up(sm) {
@@ -34,6 +37,47 @@
 @media screen and (min-width: 768px) {
   .rwd-break {
     display: none;
+  }
+  .animationArea {
+    height: calc(100vw * 322 / 1440);
+
+    position: relative;
+    & > * {
+      position: absolute;
+    }
+    img {
+      width: 100%;
+    }
+    .buildings {
+      width: calc(100vw * 330 / 1440);
+      top: 0;
+      left: calc(100% * 392 / 1440);
+    }
+    .hill {
+      top: calc(100% * 131 / 322);
+      width: 100%;
+      left: 0;
+    }
+    .lady {
+      width: calc(100% * 142 / 1440);
+      top: calc(100% * 106 / 322);
+      left: calc(100% * 337 / 1440);
+    }
+    .leftTree {
+      width: calc(100% * 104 / 1440);
+      top: calc(100% * 16 / 322);
+      left: calc(100% * 272 / 1440);
+    }
+    .rightTree {
+      width: calc(100% * 47 / 1440);
+      top: calc(100% * 117 / 322);
+      left: calc(100% * 744 / 1440);
+    }
+    .bottomHill {
+      width: 100%;
+      top: calc(100% * 188 / 322);
+      left: 0;
+    }
   }
 }
 
@@ -120,4 +164,98 @@
 
 .fadeIn_SliderUp {
   animation: fadeIn_SliderUp 1s forwards 0s ease;
+}
+
+@keyframes hillAnimation {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.hillAnimation {
+  animation: hillAnimation 0.5s forwards 0s linear;
+  -webkit-animation: hillAnimation 0.5s forwards 0s linear;
+}
+
+@keyframes wateringLadyAnimation {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+    -webkit-transform: translateY(40%);
+    -moz-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    -o-transform: translateY(40%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.wateringLadyAnimation {
+  animation: wateringLadyAnimation 0.5s forwards 0s linear;
+  -webkit-animation: wateringLadyAnimation 0.5s forwards 0s linear;
+}
+
+@keyframes leftTreeAnimation {
+  0% {
+    transform: scale(0.1) translateY(-100%);
+    -webkit-transform: scale(0.1) translateY(-100%);
+    -moz-transform: scale(0.1) translateY(-100%);
+    -ms-transform: scale(0.1) translateY(-100%);
+    -o-transform: scale(0.1) translateY(-100%);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
+.leftTreeAnimation {
+  animation: leftTreeAnimation 1s forwards 0s linear;
+  -webkit-animation: leftTreeAnimation 1s forwards 0s linear;
+}
+
+@keyframes contactBuildingAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(35%);
+    -webkit-transform: translateY(35%);
+    -moz-transform: translateY(35%);
+    -ms-transform: translateY(35%);
+    -o-transform: translateY(35%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
+}
+
+.contactBuildingAnimation {
+  animation: contactBuildingAnimation 1s forwards 0s linear;
+  -webkit-animation: contactBuildingAnimation 1s forwards 0s linear;
 }
