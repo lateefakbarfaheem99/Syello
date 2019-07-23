@@ -100,7 +100,7 @@
       display: unset;
       .svg_content {
         width: 100%;
-        margin-top: 10%;
+        margin-top: calc(100vw * 158 / 1440);
         .phone_img {
           transition: 1s;
         }

@@ -147,7 +147,6 @@ class CommunicationArea extends React.Component<any, State> {
       imageProps[this.curTargetIndex].opacity = this.opacity;
       imageProps[this.curTargetIndex].scale = this.scale;
       this.setState({ imageProps: imageProps });
-      console.log(this.phoneImageOpacity);
     }
     if (degree > 360) degree = 0;
     if (degree < 0) degree = 360;

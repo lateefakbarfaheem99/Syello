@@ -1,9 +1,9 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import './styles.scss'
-import download_sylo_with_particle from '../../images/download_sylo_with_particle.png'
-import apple_app_store from '../../images/apple_app_store.png'
-import google_play_store from '../../images/google_play.png'
+import './styles.scss';
+import download_sylo_with_particle from '../../images/download_sylo_with_particle.png';
+import apple_app_store from '../../images/footer/app-store-badge-us-b.svg';
+import google_play_store from '../../images/footer/google-play-badge-us.svg';
 
 const DownloadWidget: React.StatelessComponent<{}> = () => {
   return (
@@ -25,7 +25,7 @@ const DownloadWidget: React.StatelessComponent<{}> = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DownloadWidget
+export default DownloadWidget;

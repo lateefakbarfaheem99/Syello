@@ -209,8 +209,8 @@
 }
 
 .slideUpAndDown10 {
-  animation: slideUpAndDown10 1s forwards 0s ease-out;
-  -webkit-animation: slideUpAndDown10 1s forwards 0s ease-out;
+  animation: slideUpAndDown10 1s forwards 0s cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: slideUpAndDown10 1s forwards 0s cubic-bezier(0, 0, 1, 1);
 }
 
 @keyframes ladyAppear {

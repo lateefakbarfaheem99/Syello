@@ -37,9 +37,16 @@ const TheDifferencePage: React.StatelessComponent<{}> = () => {
   return (
     <div className="TheDifferencePage">
       <div className="not_average">
-        <div className="big_text">
+        <Animated
+          animationIn="textFadeInSlideUp"
+          animationOut="fadeOut"
+          animationInDelay={1000}
+          animationInDuration={500}
+          isVisible={true}
+          className="big_text"
+        >
           Not your average <span className="messenger">messenger</span>
-        </div>
+        </Animated>
         <div className="content_area">
           <div className="animationArea">
             <Animated
